@@ -1,9 +1,14 @@
 <template>
-  <div></div>
+  <div>Card</div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Card",
+  data() {
+    return {};
+  },
+};
 </script>
 
-<style></style>
+<style lang="less"></style>

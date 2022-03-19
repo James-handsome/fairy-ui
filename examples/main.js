@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 
 import "../components/css/card.less";
-import Card from "../components/lib/card/src/main.vue";
+import Card from "../components/lib/card/index";
 
 Vue.use(Card);
 
