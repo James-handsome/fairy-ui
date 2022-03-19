@@ -1,9 +1,9 @@
 {
-  "name": "fleet-ui",
+  "name": "fairy-ui",
   "version": "0.1.0",
-  "description": "fleet-ui 组件库",
+  "description": "fairy-ui 组件库",
   "main": "dist/index.umd.js",
-  "keywords": ["fleet-ui","vue","ui"],
+  "keywords": ["fairy-ui","vue","ui"],
   "author": "zhanhao",
   "files": ["dist","components"],
   "scripts": {
