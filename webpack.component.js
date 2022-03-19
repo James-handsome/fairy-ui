@@ -1,5 +1,6 @@
-const { VueloaderPlugin } = require("vue-loader");
+const { VueLoaderPlugin } = require("vue-loader");
 
+const path = require("path");
 const glob = require("glob");
 
 const list = {};
@@ -10,7 +11,6 @@ async function makeList(dirPath, list) {
     const component = file.split(/[/.]/)[2];
     list[component] = `./${file}`;
   }
-  console.log(list);
 }
 
 makeList("components/lib", list);
@@ -19,11 +19,11 @@ module.exports = {
   entry: list,
   output: {
     filename: "[name].umd.js",
-    path: "dist",
+    path: path.resolve(__dirname, "dist"),
     library: "mui",
     libraryTarget: "umd",
   },
-  plugins: [new VueloaderPlugin()],
+  plugins: [new VueLoaderPlugin()],
   module: {
     rules: [
       {
