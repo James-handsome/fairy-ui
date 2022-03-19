@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build:js": "webpack --config ./webpack.component.js",
-    "build:css": "gulp less"
+    "build:css": "gulp less",
+    "publish": "npm run build:js && npm run build:css"
   },
   "dependencies": {
     "core-js": "^3.6.5",
