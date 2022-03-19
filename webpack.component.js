@@ -1,3 +1,5 @@
+const { VueloaderPlugin } = require("vue-loader");
+
 const glob = require("glob");
 
 const list = {};
@@ -20,5 +22,18 @@ module.exports = {
     path: "dist",
     library: "mui",
     libraryTarget: "umd",
+  },
+  plugins: [new VueloaderPlugin()],
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        use: [
+          {
+            loader: "vue-loader",
+          },
+        ],
+      },
+    ],
   },
 };

@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:js": "webpack --config ./webpack.component.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -29,7 +30,8 @@
     "lint-staged": "^9.5.0",
     "prettier": "^2.2.1",
     "vue-loader": "^17.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "webpack-cli": "^4.9.2"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
