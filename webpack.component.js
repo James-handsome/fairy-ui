@@ -17,6 +17,7 @@ makeList("components/lib", list);
 
 module.exports = {
   entry: list,
+  mode: "development",
   output: {
     filename: "[name].umd.js",
     path: path.resolve(__dirname, "dist"),
