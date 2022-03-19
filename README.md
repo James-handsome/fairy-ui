@@ -1,24 +1,22 @@
-# myapp
+# fleet-ui 组件库
 
-## Project setup
-```
-npm install
-```
+### 快速开始
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+#### 1、安装组件库
 
-### Compiles and minifies for production
-```
-npm run build
-```
+````bash
+ npm i fleet-ui
+````
 
-### Lints and fixes files
-```
-npm run lint
-```
+#### 2、引用组件库
+````javascript
+    // 全部引入 
+    import 'fleet-ui/dist/css/index.css'
+    import fleetUi from 'fleet-ui'
+    Vue.use(fleetUi)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+    // 按需引用
+    import 'fleet-ui/dist/css/card.css'
+    import { Card } from 'fleet-ui'
+    Vue.use(Card)
+````

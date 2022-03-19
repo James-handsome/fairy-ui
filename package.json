@@ -1,7 +1,11 @@
 {
   "name": "myapp",
   "version": "0.1.0",
-  "private": true,
+  "description": "fleet-组件库",
+  "main": "dist/index.umd.js",
+  "keywords": ["fleet-ui","vue","ui"],
+  "author": "zhanhao",
+  "files": ["dist","components"],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
