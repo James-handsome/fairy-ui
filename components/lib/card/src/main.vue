@@ -1,10 +1,18 @@
 <template>
-  <div class="m-card">
-    <div class="m-card-img">
+  <div class="m-card" :style="width ? { width: width + 'px' } : {}">
+    <div
+      class="m-card-img"
+      :style="imgHeight ? { height: imgHeight + 'px' } : {}"
+    >
       <img :src="imgSrc" alt="img" />
     </div>
-    <div class="m-card-summary">summary</div>
-    <div class="footer">footer</div>
+    <div class="m-card-summary" v-if="summary">{{ summary }}</div>
+    <div class="m-card-summary" v-else>
+      <slot></slot>
+    </div>
+    <div class="footer">
+      <slot name="footer"></slot>
+    </div>
   </div>
 </template>
 
@@ -12,7 +20,7 @@
 export default {
   name: "Card",
   props: {
-    widht: {
+    width: {
       type: Number,
       default: 0,
     },
