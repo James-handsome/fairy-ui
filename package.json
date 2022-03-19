@@ -1,7 +1,7 @@
 {
-  "name": "myapp",
+  "name": "fleet-ui",
   "version": "0.1.0",
-  "description": "fleet-组件库",
+  "description": "fleet-ui 组件库",
   "main": "dist/index.umd.js",
   "keywords": ["fleet-ui","vue","ui"],
   "author": "zhanhao",
@@ -12,7 +12,7 @@
     "lint": "vue-cli-service lint",
     "build:js": "webpack --config ./webpack.component.js",
     "build:css": "gulp less",
-    "publish": "npm run build:js && npm run build:css"
+    "bale": "npm run build:js && npm run build:css"
   },
   "dependencies": {
     "core-js": "^3.6.5",
