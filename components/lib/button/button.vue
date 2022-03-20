@@ -1,8 +1,13 @@
 <template>
-  <button :type="htmlType" :class="classes" :disabled="disabled">
+  <button
+    :type="htmlType"
+    :class="classes"
+    :disabled="disabled"
+    @click="handleClick"
+  >
     <Icon class="ivu-load-loop" type="load-c" v-if="loading"></Icon>
     <Icon :type="icon" v-if="icon && !loading"></Icon>
-    <span v-if="showSlot" v-el:slot><slot></slot></span>
+    <span v-if="showSlot" ref="slot"><slot></slot></span>
   </button>
 </template>
 <script>
@@ -26,6 +31,7 @@ export default {
           "success",
           "warning",
           "error",
+          "default",
         ]);
       },
     },
@@ -36,7 +42,7 @@ export default {
     },
     size: {
       validator(value) {
-        return oneOf(value, ["small", "large"]);
+        return oneOf(value, ["small", "large", "default"]);
       },
     },
     loading: Boolean,
@@ -74,11 +80,13 @@ export default {
       ];
     },
   },
-  compiled() {
-    this.showSlot =
-      this.$els.slot.innerHTML
-        .replace(/\n/g, "")
-        .replace(/<!--[\w\W\r\n]*?-->/gim, "") !== "";
+  methods: {
+    handleClick(event) {
+      this.$emit("click", event);
+    },
+  },
+  mounted() {
+    this.showSlot = this.$slots.default !== undefined;
   },
 };
 </script>
