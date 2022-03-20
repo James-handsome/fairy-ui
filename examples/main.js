@@ -1,8 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
 
-import "../components/css/components/card.less";
-import Card from "../components/lib/card/index";
+import "../components/css/index.less";
+import Card from "../components/lib/card";
 
 Vue.use(Card);
 
