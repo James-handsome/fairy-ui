@@ -1,4 +1,4 @@
-import Card from "./main.vue";
+import Card from "./card.vue";
 
 Card.install = function (Vue) {
   Vue.component(Card.name, Card);
