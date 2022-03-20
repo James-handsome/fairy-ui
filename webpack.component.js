@@ -37,6 +37,14 @@ module.exports = {
         ],
       },
       {
+        test: /\.js$/,
+        loader: "babel-loader",
+        options: {
+          sourceMap: true,
+        },
+        exclude: /node_modules/,
+      },
+      {
         test: /\.less$/,
         use: [
           { loader: "style-loader" },
