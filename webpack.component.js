@@ -25,6 +25,7 @@ module.exports = {
     libraryTarget: "umd",
   },
   plugins: [new VueLoaderPlugin()],
+  devtool: "inline-cheap-module-source-map",
   module: {
     rules: [
       {
@@ -34,6 +35,32 @@ module.exports = {
             loader: "vue-loader",
           },
         ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          { loader: "style-loader" },
+          {
+            loader: "css-loader",
+            options: { sourceMap: true },
+          },
+          {
+            loader: "less-loader",
+            options: {
+              lessOptions: {
+                sourceMap: true,
+                javascriptEnabled: true,
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]?[hash]",
+        },
       },
     ],
   },
