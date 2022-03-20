@@ -9,6 +9,7 @@ import { oneOf } from "../../utils/assist";
 const prefixCls = "ivu-btn-group";
 
 export default {
+  name: "ButtonGroup",
   props: {
     size: {
       validator(value) {

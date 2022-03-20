@@ -12,6 +12,7 @@ import { oneOf } from "../../utils/assist";
 const prefixCls = "ivu-btn";
 
 export default {
+  name: "Button",
   components: { Icon },
   props: {
     type: {
