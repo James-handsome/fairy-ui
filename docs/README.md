@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /hero.png
+heroImage: /Vue.png
 heroText: fairy-ui
 tagline: fairy-ui
 actionText: 快速上手 →
