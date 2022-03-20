@@ -2,7 +2,6 @@ const { VueLoaderPlugin } = require("vue-loader");
 
 const path = require("path");
 const glob = require("glob");
-
 const list = {};
 
 async function makeList(dirPath, list) {
@@ -25,7 +24,6 @@ module.exports = {
     libraryTarget: "umd",
   },
   plugins: [new VueLoaderPlugin()],
-  devtool: "inline-cheap-module-source-map",
   module: {
     rules: [
       {
