@@ -1,7 +1,11 @@
 import Card from "./card";
+import Button from "./button";
+import ButtonGroup from "./button-group";
 
 const components = {
   Card,
+  Button,
+  ButtonGroup,
 };
 
 const install = function (Vue) {

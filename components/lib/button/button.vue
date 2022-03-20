@@ -20,7 +20,7 @@ import Icon from "../icon";
 import { oneOf } from "../../utils/assist";
 import mixinsLink from "../../mixins/link";
 
-const prefixCls = "fairy-btn";
+const prefixCls = "ivu-btn";
 
 export default {
   name: "Button",

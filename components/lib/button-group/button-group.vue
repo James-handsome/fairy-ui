@@ -6,7 +6,7 @@
 <script>
 import { oneOf } from "../../utils/assist";
 
-const prefixCls = "fairy-btn-group";
+const prefixCls = "ivu-btn-group";
 
 export default {
   name: "ButtonGroup",
