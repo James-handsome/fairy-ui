@@ -1,6 +1,6 @@
 {
   "name": "fairy-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "fairy-ui 组件库",
   "main": "dist/index.umd.js",
   "keywords": [
