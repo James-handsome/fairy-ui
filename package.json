@@ -51,13 +51,9 @@
     "vuepress": "^1.9.7",
     "webpack-cli": "^4.9.2"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "lint-staged": {
     "*.{js,jsx,vue}": [
-      "vue-cli-service lint",
-      "git add"
+      "vue-cli-service lint"
     ]
   }
 }
