@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Card></Card>
-    <Button> 这是一个按钮 </Button>
+    <!-- <Card></Card>
+    <Button> 这是一个按钮 </Button> -->
   </div>
 </template>
 

@@ -1,18 +1,41 @@
 .slide-motion(@className, @keyframeName) {
     .make-motion(@className, @keyframeName);
-    .@{className}-enter, .@{className}-appear {
+    .@{className}-enter-active, .@{className}-appear {
         opacity: 0;
         animation-timing-function: @ease-in-out;
     }
-    .@{className}-leave {
+    .@{className}-leave-active {
         animation-timing-function: @ease-in-out;
     }
 }
 
+.slide-motion(transition-drop, ivuTransitionDrop);
 .slide-motion(slide-up, ivuSlideUp);
 .slide-motion(slide-down, ivuSlideDown);
 .slide-motion(slide-left, ivuSlideLeft);
 .slide-motion(slide-right, ivuSlideRight);
+
+@keyframes ivuTransitionDropIn {
+    0% {
+        opacity: 0;
+        transform: scaleY(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes ivuTransitionDropOut {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scaleY(0.8);
+    }
+}
 
 @keyframes ivuSlideUpIn {
     0% {

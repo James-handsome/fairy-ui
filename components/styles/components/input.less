@@ -7,6 +7,9 @@
         width: 100%;
         position: relative;
         vertical-align: middle;
+
+        // #2149 & #2219
+        line-height: normal
     }
     &-icon {
         width: 32px;
@@ -17,14 +20,31 @@
         color: @subsidiary-color;
         position: absolute;
         right: 0;
-        z-index: 1;
+        z-index: 3;
+    }
+    &-hide-icon &-icon{
+        display: none;
     }
     &-icon-validate{
         display: none;
     }
 
-    &-icon + &{
+    &-icon-clear{
+        display: none;
+    }
+
+    &-wrapper:hover{
+        .@{input-prefix-cls}-icon-clear{
+            display: inline-block;
+        }
+    }
+
+    &-icon-normal + &{
         padding-right: 32px;
+    }
+    // #554
+    &-hide-icon &-icon-normal + &{
+        padding-right: @input-padding-horizontal;
     }
 
     &-wrapper-large &-icon{
@@ -38,9 +58,9 @@
         height: @input-height-small;
         line-height: @input-height-small;
 
-        + .@{input-prefix-cls} {
-            padding-right: 24px;
-        }
+        //+ .@{input-prefix-cls} {
+        //    padding-right: 24px;
+        //}
     }
 }
 
@@ -58,11 +78,22 @@
     .@{input-prefix-cls}-group{
         .input-group-error;
     }
+    .@{transfer-prefix-cls} {
+        .@{input-prefix-cls} {
+            .input;
+            &-icon{
+                color: @subsidiary-color;
+            }
+        }
+    }
 }
 .@{form-item-prefix-cls}-validating{
     .@{input-prefix-cls}{
         &-icon-validate{
             display: inline-block;
+        }
+        &-icon + .@{input-prefix-cls}{
+            padding-right: 32px;
         }
     }
 }
