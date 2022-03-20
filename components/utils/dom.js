@@ -1,7 +1,8 @@
-import Vue from 'vue';
+import Vue from "vue";
 const isServer = Vue.prototype.$isServer;
 
 /* istanbul ignore next */
+/* eslint-disable*/
 export const on = (function() {
     if (!isServer && document.addEventListener) {
         return function(element, event, handler) {

@@ -2,7 +2,7 @@
   inspired by https://www.npmjs.com/package/react-csv-downloader
   now removed from Github
 */
-
+/* eslint-disable*/
 const newLine = '\r\n';
 const appendLine = (content, row, { separator, quoted }) => {
     const line = row.map(data => {

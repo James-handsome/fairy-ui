@@ -1,7 +1,7 @@
 // Thanks to
 // https://github.com/andreypopp/react-textarea-autosize/
 // https://github.com/ElemeFE/element/blob/master/packages/input/src/calcTextareaHeight.js
-
+/* eslint-disable*/
 let hiddenTextarea;
 
 const HIDDEN_STYLE = `
