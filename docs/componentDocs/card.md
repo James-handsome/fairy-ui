@@ -3,11 +3,11 @@
 
 ### 示例
 ---
-<f-card imgSrc="/tiger.jpeg" summary="Vue"></f-card>
+<Card imgSrc="/tiger.jpeg" summary="Vue"></Card>
 
 ### 代码
-````html
-<f-card imgSrc="/tiger.jpeg" summary="Vue"></f-card>
+````xml
+<Card imgSrc="/tiger.jpeg" summary="Vue"></Card>
 ````
 
 ### Attributes
