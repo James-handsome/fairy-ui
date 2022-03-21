@@ -2,22 +2,8 @@
 按钮组件
 
 
-### 示例
----
-  <Button>Default</Button>
-  <Button type="primary">Primary</Button>
-  <Button type="ghost">Ghost</Button>
-  <Button type="dashed">Dashed</Button>
-  <Button type="text">Text</Button>
-  <br><br>
-  <Button type="info">Info</Button>
-  <Button type="success">Success</Button>
-  <Button type="warning">Warning</Button>
-  <Button type="error">Error</Button>
-  <br><br>
-
-
-### 代码
+### 示例代码
+::: demo
 ````xml
 <Button>Default</Button>
   <Button type="primary">Primary</Button>
@@ -31,3 +17,5 @@
   <Button type="error">Error</Button>
   <br><br>
 ````
+
+::: 
