@@ -1,9 +1,10 @@
-# Card
+# card
 卡片组件
 
 ### 示例
 ---
 <Card imgSrc="/tiger.jpeg" summary="Vue"></Card>
+
 
 ### 代码
 ````xml

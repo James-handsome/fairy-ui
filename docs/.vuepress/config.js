@@ -9,7 +9,8 @@ module.exports = {
     ],
     sidebar: [
       '/',
-      'componentDocs/card'
+      'componentDocs/Card',
+      'componentDocs/Button'
     ]
   }
 }

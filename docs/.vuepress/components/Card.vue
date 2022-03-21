@@ -44,5 +44,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
- 
+ @import url('../styles/index.less');
 </style>
