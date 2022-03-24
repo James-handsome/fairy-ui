@@ -1,7 +1,7 @@
-# card
-卡片组件
+#### Card 卡片
 
-### 示例
+
+#### 示例
 ---
 <Card imgSrc="/tiger.jpeg" summary="Vue"></Card>
 

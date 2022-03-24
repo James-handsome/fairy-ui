@@ -1,10 +1,9 @@
-# button
-按钮组件
+#### Button 按钮
 
 
-### 示例代码
+#### 示例代码
 ::: demo
-````xml
+```html
 <Button>Default</Button>
   <Button type="primary">Primary</Button>
   <Button type="ghost">Ghost</Button>
@@ -16,6 +15,6 @@
   <Button type="warning">Warning</Button>
   <Button type="error">Error</Button>
   <br><br>
-````
-
+```
 ::: 
+
