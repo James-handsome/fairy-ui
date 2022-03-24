@@ -2,11 +2,9 @@ import Vue from "vue";
 import App from "./App.vue";
 
 import "../components/styles/index.less";
-import Card from "../components/lib/card";
-import Button from "../components/lib/button";
+import fairyUi from "../components/lib/index";
 
-Vue.use(Card);
-Vue.use(Button);
+Vue.use(fairyUi);
 
 Vue.config.productionTip = false;
 

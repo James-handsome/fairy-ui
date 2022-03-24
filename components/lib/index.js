@@ -1,11 +1,14 @@
 import Card from "./card";
 import Button from "./button";
 import Input from "./input";
+import { Col, Row } from "./grid";
 
 const components = {
   Card,
   Button,
   Input,
+  Col,
+  Row,
 };
 
 const install = function (Vue) {

@@ -1,7 +1,19 @@
 <template>
   <div id="app">
-    <Card></Card>
-    <Button> 这是一个按钮 </Button>
+    <Row :gutter="16" class="row-name">
+      <i-col span="6">
+        <div>col-6</div>
+      </i-col>
+      <i-col span="6">
+        <div>col-6</div>
+      </i-col>
+      <i-col span="6">
+        <div>col-6</div>
+      </i-col>
+      <i-col span="6">
+        <div>col-6</div>
+      </i-col>
+    </Row>
   </div>
 </template>
 
@@ -12,6 +24,22 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  .row-name {
+    height: 30px;
+    width: 300px;
+    background: rgb(73, 76, 251);
+    margin-bottom: 10px;
+    .ivu-col {
+      background: rgba(0, 153, 229, 0.7);
+      height: 100%;
+      &:nth-child(1) {
+        background-color: rgba(85, 198, 255, 0.7);
+      }
+      &:nth-child(3) {
+        background-color: rgba(85, 198, 255, 0.7);
+      }
+    }
+  }
 }
 </style>
 
