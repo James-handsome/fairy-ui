@@ -1,14 +1,17 @@
 import Card from "./card";
-import Button from "./button";
+import { Button, ButtonGroup } from "./button";
 import Input from "./input";
 import { Col, Row } from "./grid";
+import Icon from "./icon";
 
 const components = {
   Card,
   Button,
+  ButtonGroup,
   Input,
   Col,
   Row,
+  Icon,
 };
 
 const install = function (Vue) {
