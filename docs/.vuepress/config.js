@@ -41,6 +41,7 @@ module.exports = {
         children: [
           "/component/Card",
           "/component/Button",
+          "/component/Grid",
         ],
       },
      ],

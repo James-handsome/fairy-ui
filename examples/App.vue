@@ -1,20 +1,5 @@
 <template>
-  <div id="app">
-    <Row :gutter="16" class="row-name">
-      <i-col span="6">
-        <div>col-6</div>
-      </i-col>
-      <i-col span="6">
-        <div>col-6</div>
-      </i-col>
-      <i-col span="6">
-        <div>col-6</div>
-      </i-col>
-      <i-col span="6">
-        <div>col-6</div>
-      </i-col>
-    </Row>
-  </div>
+  <div id="app"></div>
 </template>
 
 <style lang="less">
