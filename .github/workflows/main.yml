@@ -27,7 +27,6 @@ jobs:
       uses: cross-the-world/scp-pipeline@master
       env:
         # 私钥
-        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         WELCOME: "ssh scp ssh pipelines"
         LASTSSH: "Doing something after copying"
       with:
