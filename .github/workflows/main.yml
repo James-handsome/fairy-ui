@@ -26,14 +26,14 @@ jobs:
       # 因为构建之后，需要把代码上传到服务器上，所以需要连接到ssh，并且做一个拷贝操作
       uses: cross-the-world/scp-pipeline@master
       env:
-        # 私钥
         WELCOME: "ssh scp ssh pipelines"
         LASTSSH: "Doing something after copying"
+        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
       with:
         # 用户
         host: ${{ secrets.USER_HOST }}
         user: ${{ secrets.USER_NAME }}
-        pass: ${{ secrets.PRIVATE_KEY }}
+        # pass: ${{ secrets.PRIVATE_KEY }}
         connect_timeout: 10s
         # 打包地址
         local: './docs/.vuepress/dist/*'
