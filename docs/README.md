@@ -3,7 +3,7 @@ home: true
 heroImage: /Vue.png
 heroText: fairy-ui
 tagline: fairy-ui
-actionText: 快速上手→
+actionText: 快速上手 自动部署→
 actionLink: /component/installation
 features:
 - title: 简洁至上
