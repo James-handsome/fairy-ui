@@ -35,7 +35,7 @@ jobs:
         # scp参数
         ARGS: '-avzr --delete'
          # 用户
-        REMOTE_USER: 'root'
+        REMOTE_USER: 'opc'
         WELCOME: "ssh scp ssh pipelines"
         LASTSSH: "Doing something after copying"
         # 目标地址
