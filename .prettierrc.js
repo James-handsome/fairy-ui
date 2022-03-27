@@ -1,5 +1,5 @@
 module.exports = {
-  tabWidth: 2,  
+  tabWidth: 2,
   endOfLine: "auto",
-  disableLanguages: ['vue']
+  disableLanguages: ["vue"],
 };
