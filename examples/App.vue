@@ -1,5 +1,5 @@
 <template>
-  <div id="app">===</div>
+  <div id="app">==66=</div>
 </template>
 
 <style lang="less">
