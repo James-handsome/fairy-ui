@@ -32,6 +32,8 @@ jobs:
         SOURCE:  ./docs/.vuepress/dist/*
         # 服务器ip：换成你的服务器IP
         REMOTE_HOST: ${{ secrets.USER_HOST }}
+        # scp参数
+        ARGS: '-avzr --delete'
          # 用户
         REMOTE_USER: 'root'
         WELCOME: "ssh scp ssh pipelines"
