@@ -32,7 +32,7 @@ jobs:
         # 用户
         host: ${{ secrets.USER_HOST }}
         user: ${{ secrets.USER_NAME }}
-        privateKey: ${{ secrets.PRIVATE_KEY }}
+        scp: ${{ secrets.PRIVATE_KEY }}
         connect_timeout: 10s
         # 打包地址
         local: './docs/.vuepress/dist/*'
