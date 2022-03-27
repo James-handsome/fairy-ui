@@ -1,3 +1,5 @@
-module.exports ={
-  "end-of-line": 'crlf',
-}
+module.exports = {
+  tabWidth: 2,  
+  endOfLine: "auto",
+  disableLanguages: ['vue']
+};
