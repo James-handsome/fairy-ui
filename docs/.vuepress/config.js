@@ -39,9 +39,9 @@ module.exports = {
         title: "组件",
         collapsable: false,
         children: [
+          "/component/Grid",
           "/component/Card",
           "/component/Button",
-          "/component/Grid",
         ],
       },
      ],
