@@ -1,6 +1,6 @@
 const { VueLoaderPlugin } = require("vue-loader");
+const webpack = require("webpack");
 const path = require("path");
-const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   entry: "./packages/index.js",
@@ -10,26 +10,57 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     library: "mui",
     libraryTarget: "umd",
+    umdNamedDefine: true,
+  },
+  resolve: {
+    extensions: [".js", ".vue"],
+    alias: {
+      vue: "vue/dist/vue.esm.js",
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
+  externals: {
+    vue: {
+      root: "Vue",
+      commonjs: "vue",
+      commonjs2: "vue",
+      amd: "vue",
+    },
   },
   plugins: [
-    new VueLoaderPlugin(),
-    new CompressionPlugin({
-      asset: "[path].gz[query]",
-      algorithm: "gzip",
-      test: /\.(js|css)$/,
-      threshold: 10240,
-      minRatio: 0.8,
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": '"production"',
     }),
+    new VueLoaderPlugin(),
   ],
   module: {
     rules: [
       {
         test: /\.vue$/,
-        use: [
-          {
-            loader: "vue-loader",
+        loader: "vue-loader",
+        options: {
+          loaders: {
+            less: [
+              "vue-style-loader",
+              {
+                loader: "css-loader",
+                options: {
+                  sourceMap: true,
+                },
+              },
+              {
+                loader: "less-loader",
+                options: {
+                  sourceMap: true,
+                },
+              },
+            ],
           },
-        ],
+          postLoaders: {
+            html: "babel-loader?sourceMap",
+          },
+          sourceMap: true,
+        },
       },
       {
         test: /\.js$/,
@@ -67,7 +98,7 @@ module.exports = {
       },
       {
         test: /\.(woff|eot|ttf)\??.*$/,
-        loader: "url-loader?limit=8192",
+        loader: "file-loader",
       },
       {
         test: /\.(html|tpl)$/,

@@ -178,4 +178,4 @@ API.lang = (code) => {
   else console.log(`The ${code} language pack is not loaded.`);
 };
 
-module.exports.default = module.exports = API;
+export default API;
