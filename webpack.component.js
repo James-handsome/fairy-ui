@@ -1,6 +1,7 @@
 const { VueLoaderPlugin } = require("vue-loader");
 const webpack = require("webpack");
 const path = require("path");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   entry: "./packages/index.js",
@@ -32,6 +33,12 @@ module.exports = {
       "process.env.NODE_ENV": '"production"',
     }),
     new VueLoaderPlugin(),
+    new CompressionPlugin({
+      algorithm: "gzip",
+      test: /\.(js|css)$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
   ],
   module: {
     rules: [
