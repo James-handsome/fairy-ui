@@ -1,6 +1,6 @@
-import fairyUi  from '../../components/lib/index.js'
+import fairyUi  from '../../packages/lib/index.js'
 
-import '../../components/styles/index.less'
+import '../../packages/styles/index.less'
 
 import './common.less';
 
