@@ -1,2 +1,2 @@
-import Rate from './rate.vue';
+import Rate from "./rate.vue";
 export default Rate;

@@ -1,2 +1,2 @@
-import Circle from './circle.vue';
+import Circle from "./circle.vue";
 export default Circle;
