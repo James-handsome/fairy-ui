@@ -3,7 +3,9 @@ import { Button, ButtonGroup } from "./button";
 import Input from "./input";
 import { Col, Row } from "./grid";
 import Icon from "./icon";
-import Layout from "./layout";
+import { Layout, Header, Sider, Content, Footer } from "./layout";
+import { Menu, MenuGroup, MenuItem, Submenu } from "./menu";
+import { Select, Option, OptionGroup } from "./select";
 
 const components = {
   Card,
@@ -14,6 +16,17 @@ const components = {
   Row,
   Icon,
   Layout,
+  Header,
+  Sider,
+  Content,
+  Footer,
+  Menu,
+  MenuGroup,
+  MenuItem,
+  Submenu,
+  Select,
+  Option,
+  OptionGroup,
 };
 
 const install = function (Vue) {
