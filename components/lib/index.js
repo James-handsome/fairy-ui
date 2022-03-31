@@ -3,6 +3,7 @@ import { Button, ButtonGroup } from "./button";
 import Input from "./input";
 import { Col, Row } from "./grid";
 import Icon from "./icon";
+import Layout from "./layout";
 
 const components = {
   Card,
@@ -12,6 +13,7 @@ const components = {
   Col,
   Row,
   Icon,
+  Layout,
 };
 
 const install = function (Vue) {
