@@ -163,7 +163,7 @@ if (typeof window !== "undefined" && window.Vue) {
 }
 
 const API = {
-  version: process.env.VERSION, // eslint-disable-line no-undef
+  version: process.env.VERSION,
   locale: locale.use,
   i18n: locale.i18n,
   install,
@@ -175,7 +175,7 @@ const API = {
 API.lang = (code) => {
   const langObject = window["iview/locale"].default;
   if (code === langObject.i.locale) locale.use(langObject);
-  else console.log(`The ${code} language pack is not loaded.`); // eslint-disable-line no-console
+  else console.log(`The ${code} language pack is not loaded.`);
 };
 
-module.exports.default = module.exports = API; // eslint-disable-line no-undef
+module.exports.default = module.exports = API;
