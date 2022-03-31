@@ -1,4 +1,4 @@
-import fairyUi  from '../../packages/lib/index.js'
+import fairyUi  from '../../packages/index.js'
 
 import '../../packages/styles/index.less'
 
