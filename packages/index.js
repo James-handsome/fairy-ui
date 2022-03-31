@@ -163,7 +163,6 @@ if (typeof window !== "undefined" && window.Vue) {
 }
 
 const API = {
-  version: process.env.VERSION,
   locale: locale.use,
   i18n: locale.i18n,
   install,
@@ -172,10 +171,5 @@ const API = {
   ...components,
 };
 
-API.lang = (code) => {
-  const langObject = window["iview/locale"].default;
-  if (code === langObject.i.locale) locale.use(langObject);
-  else console.log(`The ${code} language pack is not loaded.`);
-};
 
 export default API;
