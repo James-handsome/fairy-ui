@@ -1,5 +1,4 @@
 const { VueLoaderPlugin } = require("vue-loader");
-const webpack = require("webpack");
 const path = require("path");
 const CompressionPlugin = require("compression-webpack-plugin");
 
@@ -29,9 +28,6 @@ module.exports = {
     },
   },
   plugins: [
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": '"production"',
-    }),
     new VueLoaderPlugin(),
     new CompressionPlugin({
       algorithm: "gzip",
