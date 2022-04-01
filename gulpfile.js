@@ -1,12 +1,12 @@
 const gulp = require("gulp");
 const less = require("gulp-less");
-const minifyCSS = require("gulp-minify-css");
+const gulpCleanCss = require("gulp-clean-css");
 
 gulp.task("less", async function () {
   return gulp
     .src("./components/styles/*.less")
     .pipe(less())
-    .pipe(minifyCSS())
+    .pipe(gulpCleanCss())
     .pipe(gulp.dest("dist/css"));
 });
 
