@@ -51,9 +51,7 @@ import Upload from "./components/upload";
 import { Row, Col } from "./components/grid";
 import { Select, Option, OptionGroup } from "./components/select";
 import locale from "./locale/index";
-import  './styles/index.less'
-
-
+import "./styles/index.less";
 
 const components = {
   Affix,
@@ -173,6 +171,5 @@ const API = {
   Switch,
   ...components,
 };
-
 
 export default API;
