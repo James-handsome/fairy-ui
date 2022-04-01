@@ -1,18 +1,22 @@
 const gulp = require("gulp");
 const less = require("gulp-less");
-const gulpCleanCss = require("gulp-clean-css");
+const cleanCSS = require("gulp-clean-css");
+const rename = require("gulp-rename");
+const autoprefixer = require("gulp-autoprefixer");
 
-gulp.task("less", async function () {
-  return gulp
-    .src("./packages/styles/*.less")
+gulp.task("less", function () {
+  gulp
+    .src("./packages/styles/index.less")
     .pipe(less())
-    .pipe(gulpCleanCss())
+    .pipe(autoprefixer())
+    .pipe(cleanCSS())
+    .pipe(rename("iview.css"))
     .pipe(gulp.dest("dist/css"));
 });
 
 // 拷贝字体文件
-gulp.task("fonts", async function () {
-  return gulp
+gulp.task("fonts", function () {
+  gulp
     .src("./packages/styles/common/iconfont/fonts/*.*")
     .pipe(gulp.dest("dist/css/fonts"));
 });
