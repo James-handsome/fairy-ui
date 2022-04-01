@@ -1,7 +1,12 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <div></div>
+    <div>
+      <Button type="info">Info</Button>
+      <Button type="success">Success</Button>
+      <Button type="warning">Warning</Button>
+      <Button type="error">Error</Button>
+    </div>
   </div>
 </template>
 
