@@ -1,12 +1,10 @@
-import fairyUi  from '../../packages/index.js'
-
-import '../../packages/styles/index.less'
 
 import './common.less';
+import '../../lib/fairy-ui.css'
+import fairyUi from '../../packages/index'
 
-
-export default async ({
-  Vue
+export default  ({
+  Vue,
 }) => {
   if(typeof process === "undefined"){
     Vue.use(fairyUi)
