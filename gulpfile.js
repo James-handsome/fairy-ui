@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const less = require("gulp-less");
-const cleanCSS = require("gulp-clean-css");
+const minifyCss = require("gulp-minify-css");
 const rename = require("gulp-rename");
 
 
@@ -8,7 +8,7 @@ gulp.task("less", function () {
   gulp
     .src("./packages/styles/index.less")
     .pipe(less())
-    .pipe(cleanCSS())
+    .pipe(minifyCss())
     .pipe(rename("fairy-ui.css"))
     .pipe(gulp.dest("lib/styles"));
 });
