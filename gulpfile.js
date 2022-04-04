@@ -10,14 +10,14 @@ gulp.task("less", function () {
     .pipe(less())
     .pipe(cleanCSS())
     .pipe(rename("fui.css"))
-    .pipe(gulp.dest("dist/css"));
+    .pipe(gulp.dest("lib/styles"));
 });
 
 // 拷贝字体文件
 gulp.task("fonts", function () {
   gulp
     .src("./packages/styles/common/iconfont/fonts/*.*")
-    .pipe(gulp.dest("dist/css/fonts"));
+    .pipe(gulp.dest("lib/styles/fonts"));
 });
 
 gulp.task(
