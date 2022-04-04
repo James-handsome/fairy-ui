@@ -3,7 +3,7 @@ import './common.less';
 import '../../packages/styles/index.less'
 import fairyUi from '../../packages'
 
-export default async ({
+export default ({
   Vue,
 }) => {
   if(typeof process === "undefined"){
