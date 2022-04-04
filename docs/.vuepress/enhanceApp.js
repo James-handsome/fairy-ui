@@ -1,7 +1,7 @@
 
 import './common.less';
-import '../../packages/styles/index.less'
-import fairyUi from '../../packages'
+import '../../lib/fairyUi.css'
+import fairyUi from '../../lib/fairyUi.umd.js'
 
 export default ({
   Vue,
