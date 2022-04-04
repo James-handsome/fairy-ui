@@ -6,7 +6,7 @@ const rename = require('gulp-rename');
 // 打包css
 gulp.task("less", async function () {
   return gulp
-    .src("./packages/styles/*.less")
+    .src("./packages/styles/**/*.less")
     .pipe(less())
     .pipe(cleanCSS())
     .pipe(rename('fairy-ui.css'))
