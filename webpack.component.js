@@ -1,6 +1,5 @@
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
-const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   entry: "./packages/index.js",
