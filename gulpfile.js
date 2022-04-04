@@ -22,5 +22,5 @@ gulp.task("fonts", async function () {
 
 gulp.task(
   "default",
-  gulp.parallel("less", "fonts", (done) => done())
+  gulp.series("less", "fonts", (done) => done())
 );
