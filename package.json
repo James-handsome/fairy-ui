@@ -15,7 +15,6 @@
   ],
   "scripts": {
     "lib": "vue-cli-service build --target lib --name fairy-ui --dest lib packages/index.js",
-    "packcss": "vue-cli-service build --target lib --name fairy-ui packages/index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
