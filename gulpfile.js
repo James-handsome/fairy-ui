@@ -9,7 +9,7 @@ gulp.task("less", function () {
     .src("./packages/styles/index.less")
     .pipe(less())
     .pipe(cleanCSS())
-    .pipe(rename("fui.css"))
+    .pipe(rename("fairy-ui.css"))
     .pipe(gulp.dest("lib/styles"));
 });
 
