@@ -20,4 +20,3 @@
     import { Card } from 'fairy-ui'
     Vue.use(Card)
 ````
-"pre-commit": "lint-staged"
