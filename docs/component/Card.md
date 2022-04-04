@@ -3,7 +3,7 @@
 
 #### 示例
 ---
-<Card imgSrc="/tiger.jpeg" summary="Vue"></Card>
+<!-- <Card imgSrc="/tiger.jpeg" summary="Vue"></Card> -->
 
 
 ### 代码
