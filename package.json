@@ -2,7 +2,7 @@
   "name": "fairy-ui",
   "version": "0.1.2",
   "description": "fairy-ui 组件库",
-  "main": "dist/index.umd.js",
+  "main": "lib/fairy-ui.umd.js",
   "keywords": [
     "fairy-ui",
     "vue",
@@ -10,8 +10,8 @@
   ],
   "author": "zhanhao",
   "files": [
-    "dist",
-    "components"
+    "lib",
+    "packages"
   ],
   "scripts": {
     "lib": "vue-cli-service build --target lib --name fairy-ui --dest lib packages/index.js",
