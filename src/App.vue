@@ -1,27 +1,20 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-    <div>
-      <Button type="info">Info</Button>
-      <Button type="success">Success</Button>
-      <Button type="warning">Warning</Button>
-      <Button type="error">Error</Button>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
+    <router-view/>
   </div>
 </template>
 
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  list-style: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-</style>
 
-<script>
-export default {
-  name: "app",
-  data() {
-    return {};
-  },
-};
-</script>
+</style>

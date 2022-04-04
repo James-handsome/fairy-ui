@@ -26,15 +26,7 @@ module.exports = {
       amd: "vue",
     },
   },
-  plugins: [
-    new VueLoaderPlugin(),
-    new CompressionPlugin({
-      algorithm: "gzip",
-      test: /\.(js|css)$/,
-      threshold: 10240,
-      minRatio: 0.8,
-    }),
-  ],
+  plugins: [new VueLoaderPlugin()],
   module: {
     rules: [
       {

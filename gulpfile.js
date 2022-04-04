@@ -2,15 +2,14 @@ const gulp = require("gulp");
 const less = require("gulp-less");
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
-const autoprefixer = require("gulp-autoprefixer");
+
 
 gulp.task("less", function () {
   gulp
     .src("./packages/styles/index.less")
     .pipe(less())
-    .pipe(autoprefixer())
     .pipe(cleanCSS())
-    .pipe(rename("iview.css"))
+    .pipe(rename("fui.css"))
     .pipe(gulp.dest("dist/css"));
 });
 
