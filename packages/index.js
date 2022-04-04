@@ -1,3 +1,4 @@
+/* eslint-disable  */
 import Affix from "./components/affix";
 import Alert from "./components/alert";
 import AutoComplete from "./components/auto-complete";
@@ -5,7 +6,7 @@ import Avatar from "./components/avatar";
 import BackTop from "./components/back-top";
 import Badge from "./components/badge";
 import Breadcrumb from "./components/breadcrumb";
-import Button from "./components/button";
+import { ButtonGroup, Button } from "./components/button";
 import Card from "./components/card";
 import Carousel from "./components/carousel";
 import Cascader from "./components/cascader";
@@ -51,95 +52,15 @@ import Upload from "./components/upload";
 import { Row, Col } from "./components/grid";
 import { Select, Option, OptionGroup } from "./components/select";
 import locale from "./locale/index";
-import "./styles/index.less";
 
 const components = {
-  Affix,
-  Alert,
-  AutoComplete,
-  Avatar,
-  BackTop,
-  Badge,
-  Breadcrumb,
-  BreadcrumbItem: Breadcrumb.Item,
-  Button,
-  ButtonGroup: Button.Group,
-  Card,
-  Carousel,
-  CarouselItem: Carousel.Item,
-  Cascader,
-  Checkbox,
-  CheckboxGroup: Checkbox.Group,
-  Col,
-  Collapse,
-  ColorPicker,
-  Content: Content,
-  DatePicker,
-  Dropdown,
-  DropdownItem: Dropdown.Item,
-  DropdownMenu: Dropdown.Menu,
-  Footer: Footer,
-  Form,
-  FormItem: Form.Item,
-  Header: Header,
+  ButtonGroup, Button,
   Icon,
-  Input,
-  InputNumber,
-  Scroll,
-  Sider: Sider,
-  Submenu: Menu.Sub,
-  Layout: Layout,
-  LoadingBar,
-  Menu,
-  MenuGroup: Menu.Group,
-  MenuItem: Menu.Item,
-  Message,
-  Modal,
-  Notice,
-  Option: Option,
-  OptionGroup,
-  Page,
-  Panel: Collapse.Panel,
-  Poptip,
-  Progress,
-  Radio,
-  RadioGroup: Radio.Group,
-  Rate,
-  Row,
-  Select,
-  Slider,
-  Spin,
-  Step: Steps.Step,
-  Steps,
-  Table,
-  Tabs: Tabs,
-  TabPane: Tabs.Pane,
-  Tag,
-  Timeline,
-  TimelineItem: Timeline.Item,
-  TimePicker,
-  Tooltip,
-  Transfer,
-  Tree,
-  Upload,
+  Row, Col
 };
 
 const iview = {
   ...components,
-  iButton: Button,
-  iCircle: Circle,
-  iCol: Col,
-  iContent: Content,
-  iForm: Form,
-  iFooter: Footer,
-  iHeader: Header,
-  iInput: Input,
-  iMenu: Menu,
-  iOption: Option,
-  iProgress: Progress,
-  iSelect: Select,
-  iSwitch: Switch,
-  iTable: Table,
 };
 
 const install = function (Vue, opts = {}) {
@@ -167,8 +88,6 @@ const API = {
   locale: locale.use,
   i18n: locale.i18n,
   install,
-  Circle,
-  Switch,
   ...components,
 };
 
