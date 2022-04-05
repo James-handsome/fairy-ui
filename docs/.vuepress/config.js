@@ -52,6 +52,8 @@ module.exports = {
           "/component/Input",
           "/component/Radio",
           "/component/Checkbox",
+          "/component/Switch",
+          "/component/Table",
         ],
       },
      ],

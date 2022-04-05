@@ -60,8 +60,8 @@ const components = {
   Row, Col,
   Input,
   Radio, RadioGroup,
-  Checkbox,CheckboxGroup
-  
+  Checkbox,CheckboxGroup,
+  fSwitch:Switch
 };
 
 const iview = {
