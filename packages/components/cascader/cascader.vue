@@ -60,6 +60,7 @@
                   },
                 ]"
                 v-for="(item, index) in querySelections"
+                :key="index"
                 @click="handleSelectItem(index)"
                 v-html="item.display"
               ></li>
