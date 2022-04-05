@@ -11,7 +11,7 @@
   </span>
 </template>
 <script>
-const prefixCls = "ivu-badge";
+const prefixCls = "fairy-badge";
 
 export default {
   name: "Badge",

@@ -50,7 +50,7 @@ import Icon from "../icon/icon.vue";
 import { getStyle, oneOf } from "../../utils/assist";
 import { on, off } from "../../utils/dom";
 
-const prefixCls = "ivu-carousel";
+const prefixCls = "fairy-carousel";
 
 export default {
   name: "Carousel",

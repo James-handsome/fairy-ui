@@ -52,14 +52,14 @@
               ></render-header>
               <span :class="[prefixCls + '-sort']" v-if="column.sortable">
                 <i
-                  class="ivu-icon ivu-icon-arrow-up-b"
+                  class="fairy-icon fairy-icon-arrow-up-b"
                   :class="{
                     on: getColumn(rowIndex, index)._sortType === 'asc',
                   }"
                   @click="handleSort(getColumn(rowIndex, index)._index, 'asc')"
                 ></i>
                 <i
-                  class="ivu-icon ivu-icon-arrow-down-b"
+                  class="fairy-icon fairy-icon-arrow-down-b"
                   :class="{
                     on: getColumn(rowIndex, index)._sortType === 'desc',
                   }"
@@ -70,7 +70,7 @@
                 v-if="isPopperShow(column)"
                 v-model="getColumn(rowIndex, index)._filterVisible"
                 placement="bottom"
-                popper-class="ivu-table-popper"
+                popper-class="fairy-table-popper"
                 transfer
                 @on-popper-hide="
                   handleFilterHide(getColumn(rowIndex, index)._index)
@@ -78,7 +78,7 @@
               >
                 <span :class="[prefixCls + '-filter']">
                   <i
-                    class="ivu-icon ivu-icon-funnel"
+                    class="fairy-icon fairy-icon-funnel"
                     :class="{ on: getColumn(rowIndex, index)._isFiltered }"
                   ></i>
                 </span>

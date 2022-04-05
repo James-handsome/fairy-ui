@@ -4,7 +4,7 @@
   </ul>
 </template>
 <script>
-const prefixCls = "ivu-timeline";
+const prefixCls = "fairy-timeline";
 
 export default {
   name: "Timeline",

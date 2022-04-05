@@ -35,7 +35,7 @@ import iSelect from "../../components/select/select.vue";
 import iOption from "../../components/select/option.vue";
 import Locale from "../../mixins/locale";
 
-const prefixCls = "ivu-page";
+const prefixCls = "fairy-page";
 
 function isValueNumber(value) {
   return /^[1-9][0-9]*$/.test(value + "");

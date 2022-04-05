@@ -24,8 +24,8 @@
 import Emitter from "../../mixins/emitter";
 import { oneOf } from "../../utils/assist";
 
-const prefixCls = "ivu-steps";
-const iconPrefixCls = "ivu-icon";
+const prefixCls = "fairy-steps";
+const iconPrefixCls = "fairy-icon";
 
 export default {
   name: "Step",

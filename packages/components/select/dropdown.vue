@@ -1,5 +1,5 @@
 <template>
-  <div class="ivu-select-dropdown" :class="className" :style="styles">
+  <div class="fairy-select-dropdown" :class="className" :style="styles">
     <slot></slot>
   </div>
 </template>

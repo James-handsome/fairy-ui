@@ -38,8 +38,8 @@ import Locale from "../../../../mixins/locale";
 
 import { initTimeDate } from "../../util";
 
-const prefixCls = "ivu-picker-panel";
-const timePrefixCls = "ivu-time-picker";
+const prefixCls = "fairy-picker-panel";
+const timePrefixCls = "fairy-time-picker";
 
 const capitalize = (str) => str[0].toUpperCase() + str.slice(1);
 const mergeDateHMS = (date, hours, minutes, seconds) => {

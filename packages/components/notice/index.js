@@ -1,7 +1,7 @@
 import Notification from "../base/notification";
 
-const prefixCls = "ivu-notice";
-const iconPrefixCls = "ivu-icon";
+const prefixCls = "fairy-notice";
+const iconPrefixCls = "fairy-icon";
 const prefixKey = "ivu_notice_key_";
 
 let top = 24;
@@ -128,6 +128,6 @@ export default {
   destroy() {
     let instance = getNoticeInstance();
     noticeInstance = null;
-    instance.destroy("ivu-notice");
+    instance.destroy("fairy-notice");
   },
 };

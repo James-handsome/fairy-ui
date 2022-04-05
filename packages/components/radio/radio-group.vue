@@ -7,7 +7,7 @@
 import { oneOf, findComponentsDownward } from "../../utils/assist";
 import Emitter from "../../mixins/emitter";
 
-const prefixCls = "ivu-radio-group";
+const prefixCls = "fairy-radio-group";
 
 let seed = 0;
 const now = Date.now();
@@ -52,7 +52,7 @@ export default {
         `${prefixCls}`,
         {
           [`${prefixCls}-${this.size}`]: !!this.size,
-          [`ivu-radio-${this.size}`]: !!this.size,
+          [`fairy-radio-${this.size}`]: !!this.size,
           [`${prefixCls}-${this.type}`]: !!this.type,
           [`${prefixCls}-vertical`]: this.vertical,
         },

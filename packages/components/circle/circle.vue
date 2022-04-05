@@ -24,7 +24,7 @@
 <script>
 import { oneOf } from "../../utils/assist";
 
-const prefixCls = "ivu-chart-circle";
+const prefixCls = "fairy-chart-circle";
 
 export default {
   name: "iCircle",

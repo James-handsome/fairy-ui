@@ -5,7 +5,7 @@
       @click="toggleCollapse"
       :class="zeroWidthTriggerClasses"
     >
-      <i class="ivu-icon ivu-icon-navicon-round"></i>
+      <i class="fairy-icon fairy-icon-navicon-round"></i>
     </span>
     <div :class="childClasses">
       <slot></slot>
@@ -25,7 +25,7 @@
 <script>
 import { on, off } from "../../utils/dom";
 import { oneOf, dimensionMap, setMatchMedia } from "../../utils/assist";
-const prefixCls = "ivu-layout-sider";
+const prefixCls = "fairy-layout-sider";
 setMatchMedia();
 export default {
   name: "Sider",
@@ -105,8 +105,8 @@ export default {
     },
     triggerIconClasses() {
       return [
-        "ivu-icon",
-        `ivu-icon-chevron-${this.reverseArrow ? "right" : "left"}`,
+        "fairy-icon",
+        `fairy-icon-chevron-${this.reverseArrow ? "right" : "left"}`,
         `${prefixCls}-trigger-icon`,
       ];
     },

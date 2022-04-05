@@ -7,7 +7,7 @@
 import { findComponentsDownward, oneOf } from "../../utils/assist";
 import Emitter from "../../mixins/emitter";
 
-const prefixCls = "ivu-checkbox-group";
+const prefixCls = "fairy-checkbox-group";
 
 export default {
   name: "CheckboxGroup",
@@ -36,7 +36,7 @@ export default {
       return [
         `${prefixCls}`,
         {
-          [`ivu-checkbox-${this.size}`]: !!this.size,
+          [`fairy-checkbox-${this.size}`]: !!this.size,
         },
       ];
     },

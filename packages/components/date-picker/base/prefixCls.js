@@ -1,1 +1,1 @@
-export default "ivu-date-picker-cells";
+export default "fairy-date-picker-cells";

@@ -4,7 +4,7 @@ import Operation from "./operation.vue";
 import Locale from "../../mixins/locale";
 import Emitter from "../../mixins/emitter";
 
-const prefixCls = "ivu-transfer";
+const prefixCls = "fairy-transfer";
 
 export default {
   name: "Transfer",

@@ -80,7 +80,7 @@ import Locale from "../../mixins/locale";
 import SelectHead from "./select-head.vue";
 import FunctionalOptions from "./functional-options.vue";
 
-const prefixCls = "ivu-select";
+const prefixCls = "fairy-select";
 const optionRegexp = /^i-option$|^Option$/i;
 const optionGroupRegexp = /option-?group/i;
 
@@ -277,7 +277,7 @@ export default {
       return {
         [prefixCls + "-dropdown-transfer"]: this.transfer,
         [prefixCls + "-multiple"]: this.multiple && this.transfer,
-        ["ivu-auto-complete"]: this.autoComplete,
+        ["fairy-auto-complete"]: this.autoComplete,
       };
     },
     selectionCls() {

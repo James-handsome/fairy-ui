@@ -180,7 +180,7 @@ import {
   getRandomStr,
 } from "./util";
 
-const prefixCls = "ivu-table";
+const prefixCls = "fairy-table";
 
 let rowKey = 1;
 let columnKey = 1;

@@ -5,7 +5,7 @@
 </template>
 <script>
 import { findComponentUpward } from "../../utils/assist";
-const prefixCls = "ivu-col";
+const prefixCls = "fairy-col";
 
 export default {
   name: "iCol",

@@ -4,7 +4,7 @@
       <li>
         <span :class="arrowClasses" @click="handleExpand">
           <Icon v-if="showArrow" type="arrow-right-b"></Icon>
-          <Icon v-if="showLoading" type="load-c" class="ivu-load-loop"></Icon>
+          <Icon v-if="showLoading" type="load-c" class="fairy-load-loop"></Icon>
         </span>
         <Checkbox
           v-if="showCheckbox"
@@ -50,7 +50,7 @@ import CollapseTransition from "../base/collapse-transition";
 import Emitter from "../../mixins/emitter";
 import { findComponentUpward } from "../../utils/assist";
 
-const prefixCls = "ivu-tree";
+const prefixCls = "fairy-tree";
 
 export default {
   name: "TreeNode",

@@ -3,7 +3,7 @@ import Modal from "./modal.vue";
 import Button from "../button/button.vue";
 import Locale from "../../mixins/locale";
 
-const prefixCls = "ivu-modal-confirm";
+const prefixCls = "fairy-modal-confirm";
 
 Modal.newInstance = (properties) => {
   const _props = properties || {};
@@ -169,7 +169,7 @@ Modal.newInstance = (properties) => {
         ];
       },
       iconNameCls() {
-        return ["ivu-icon", `ivu-icon-${this.iconName}`];
+        return ["fairy-icon", `fairy-icon-${this.iconName}`];
       },
       localeOkText() {
         if (this.okText) {

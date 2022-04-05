@@ -7,7 +7,7 @@
           <render-cell :render="renderFunc"></render-cell>
         </div>
         <a :class="[baseClass + '-close']" @click="close" v-if="closable">
-          <i class="ivu-icon ivu-icon-ios-close-empty"></i>
+          <i class="fairy-icon fairy-icon-ios-close-empty"></i>
         </a>
       </template>
       <template v-if="type === 'message'">
@@ -17,7 +17,7 @@
             <render-cell :render="renderFunc"></render-cell>
           </div>
           <a :class="[baseClass + '-close']" @click="close" v-if="closable">
-            <i class="ivu-icon ivu-icon-ios-close-empty"></i>
+            <i class="fairy-icon fairy-icon-ios-close-empty"></i>
           </a>
         </div>
       </template>
@@ -145,7 +145,7 @@ export default {
       if (this.type === "message") {
         // 优化一下，如果当前只有一个 Message，则不使用 js 过渡动画，这样更优美
         if (
-          document.getElementsByClassName("ivu-message-notice").length !== 1
+          document.getElementsByClassName("fairy-message-notice").length !== 1
         ) {
           el.style.height = 0;
           el.style.paddingTop = 0;
@@ -164,7 +164,7 @@ export default {
     }
 
     // check if with desc in Notice component
-    if (this.prefixCls === "ivu-notice") {
+    if (this.prefixCls === "fairy-notice") {
       let desc = this.$refs.content.querySelectorAll(
         `.${this.prefixCls}-desc`
       )[0];

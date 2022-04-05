@@ -9,9 +9,9 @@
         <slot name="prepend"></slot>
       </div>
       <i
-        class="ivu-icon"
+        class="fairy-icon"
         :class="[
-          'ivu-icon-ios-close',
+          'fairy-icon-ios-close',
           prefixCls + '-icon',
           prefixCls + '-icon-clear',
           prefixCls + '-icon-normal',
@@ -20,9 +20,9 @@
         @click="handleClear"
       ></i>
       <i
-        class="ivu-icon"
+        class="fairy-icon"
         :class="[
-          'ivu-icon-' + icon,
+          'fairy-icon-' + icon,
           prefixCls + '-icon',
           prefixCls + '-icon-normal',
         ]"
@@ -31,7 +31,7 @@
       ></i>
       <transition name="fade">
         <i
-          class="ivu-icon ivu-icon-load-c ivu-load-loop"
+          class="fairy-icon fairy-icon-load-c fairy-load-loop"
           :class="[prefixCls + '-icon', prefixCls + '-icon-validate']"
           v-if="!icon"
         ></i>
@@ -101,7 +101,7 @@ import { oneOf, findComponentUpward } from "../../utils/assist";
 import calcTextareaHeight from "../../utils/calcTextareaHeight";
 import Emitter from "../../mixins/emitter";
 
-const prefixCls = "ivu-input";
+const prefixCls = "fairy-input";
 
 export default {
   name: "Input",

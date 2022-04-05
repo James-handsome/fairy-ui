@@ -24,7 +24,7 @@
 import AsyncValidator from "async-validator";
 import Emitter from "../../mixins/emitter";
 
-const prefixCls = "ivu-form-item";
+const prefixCls = "fairy-form-item";
 
 function getPropByPath(obj, path) {
   let tempObj = obj;

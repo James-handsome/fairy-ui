@@ -33,7 +33,7 @@ import iButton from "../../button/button.vue";
 import Locale from "../../../mixins/locale";
 import Emitter from "../../../mixins/emitter";
 
-const prefixCls = "ivu-picker";
+const prefixCls = "fairy-picker";
 
 export default {
   mixins: [Locale, Emitter],

@@ -96,8 +96,8 @@ import Locale from "../../../../mixins/locale";
 
 import { siblingMonth, formatDateLabels } from "../../util";
 
-const prefixCls = "ivu-picker-panel";
-const datePrefixCls = "ivu-date-picker";
+const prefixCls = "fairy-picker-panel";
+const datePrefixCls = "fairy-date-picker";
 
 export default {
   name: "DatePickerPanel",

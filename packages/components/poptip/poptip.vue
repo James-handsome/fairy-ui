@@ -30,7 +30,7 @@
           <div :class="[prefixCls + '-arrow']"></div>
           <div :class="[prefixCls + '-inner']" v-if="confirm">
             <div :class="[prefixCls + '-body']">
-              <i class="ivu-icon ivu-icon-help-circled"></i>
+              <i class="fairy-icon fairy-icon-help-circled"></i>
               <div :class="[prefixCls + '-body-message']">
                 <slot name="title">{{ title }}</slot>
               </div>
@@ -75,7 +75,7 @@ import TransferDom from "../../directives/transfer-dom";
 import { oneOf } from "../../utils/assist";
 import Locale from "../../mixins/locale";
 
-const prefixCls = "ivu-poptip";
+const prefixCls = "fairy-poptip";
 
 export default {
   name: "Poptip",

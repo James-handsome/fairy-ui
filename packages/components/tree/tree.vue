@@ -21,7 +21,7 @@ import TreeNode from "./node.vue";
 import Emitter from "../../mixins/emitter";
 import Locale from "../../mixins/locale";
 
-const prefixCls = "ivu-tree";
+const prefixCls = "fairy-tree";
 
 export default {
   name: "Tree",

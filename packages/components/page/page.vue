@@ -1,7 +1,7 @@
 <template>
   <ul :class="simpleWrapClasses" :style="styles" v-if="simple">
     <li :title="t('i.page.prev')" :class="prevClasses" @click="prev">
-      <a><i class="ivu-icon ivu-icon-ios-arrow-left"></i></a>
+      <a><i class="fairy-icon fairy-icon-ios-arrow-left"></i></a>
     </li>
     <div :class="simplePagerClasses" :title="currentPage + '/' + allPages">
       <input
@@ -17,7 +17,7 @@
       {{ allPages }}
     </div>
     <li :title="t('i.page.next')" :class="nextClasses" @click="next">
-      <a><i class="ivu-icon ivu-icon-ios-arrow-right"></i></a>
+      <a><i class="fairy-icon fairy-icon-ios-arrow-right"></i></a>
     </li>
   </ul>
   <ul :class="wrapClasses" :style="styles" v-else>
@@ -29,7 +29,7 @@
       >
     </span>
     <li :title="t('i.page.prev')" :class="prevClasses" @click="prev">
-      <a><i class="ivu-icon ivu-icon-ios-arrow-left"></i></a>
+      <a><i class="fairy-icon fairy-icon-ios-arrow-left"></i></a>
     </li>
     <li title="1" :class="firstPageClasses" @click="changePage(1)"><a>1</a></li>
     <li
@@ -38,7 +38,7 @@
       :class="[prefixCls + '-item-jump-prev']"
       @click="fastPrev"
     >
-      <a><i class="ivu-icon ivu-icon-ios-arrow-left"></i></a>
+      <a><i class="fairy-icon fairy-icon-ios-arrow-left"></i></a>
     </li>
     <li
       :title="currentPage - 2"
@@ -85,7 +85,7 @@
       :class="[prefixCls + '-item-jump-next']"
       @click="fastNext"
     >
-      <a><i class="ivu-icon ivu-icon-ios-arrow-right"></i></a>
+      <a><i class="fairy-icon fairy-icon-ios-arrow-right"></i></a>
     </li>
     <li
       :title="allPages"
@@ -96,7 +96,7 @@
       <a>{{ allPages }}</a>
     </li>
     <li :title="t('i.page.next')" :class="nextClasses" @click="next">
-      <a><i class="ivu-icon ivu-icon-ios-arrow-right"></i></a>
+      <a><i class="fairy-icon fairy-icon-ios-arrow-right"></i></a>
     </li>
     <Options
       :show-sizer="showSizer"
@@ -120,7 +120,7 @@ import { oneOf } from "../../utils/assist";
 import Options from "./options.vue";
 import Locale from "../../mixins/locale";
 
-const prefixCls = "ivu-page";
+const prefixCls = "fairy-page";
 
 export default {
   name: "Page",

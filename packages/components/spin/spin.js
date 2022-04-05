@@ -31,7 +31,7 @@ Spin.newInstance = (properties) => {
       return h(
         "div",
         {
-          class: "ivu-spin-fullscreen ivu-spin-fullscreen-wrapper",
+          class: "fairy-spin-fullscreen fairy-spin-fullscreen-wrapper",
         },
         [vnode]
       );
@@ -51,11 +51,11 @@ Spin.newInstance = (properties) => {
       setTimeout(function () {
         spin.$parent.$destroy();
         if (
-          document.getElementsByClassName("ivu-spin-fullscreen")[0] !==
+          document.getElementsByClassName("fairy-spin-fullscreen")[0] !==
           undefined
         ) {
           document.body.removeChild(
-            document.getElementsByClassName("ivu-spin-fullscreen")[0]
+            document.getElementsByClassName("fairy-spin-fullscreen")[0]
           );
         }
         cb();

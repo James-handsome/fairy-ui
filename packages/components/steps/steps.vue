@@ -6,7 +6,7 @@
 <script>
 import { oneOf } from "../../utils/assist";
 
-const prefixCls = "ivu-steps";
+const prefixCls = "fairy-steps";
 
 function debounce(fn) {
   let waiting;

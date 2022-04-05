@@ -42,7 +42,7 @@ import {
 import Emitter from "../../mixins/emitter";
 import mixin from "./mixin";
 
-const prefixCls = "ivu-menu";
+const prefixCls = "fairy-menu";
 
 export default {
   name: "Submenu",

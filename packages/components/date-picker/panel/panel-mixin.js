@@ -1,5 +1,5 @@
-const prefixCls = "ivu-picker-panel";
-const datePrefixCls = "ivu-date-picker";
+const prefixCls = "fairy-picker-panel";
+const datePrefixCls = "fairy-date-picker";
 
 export default {
   props: {

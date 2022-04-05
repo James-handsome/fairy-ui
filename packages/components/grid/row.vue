@@ -10,7 +10,7 @@ import {
   findBrothersComponents,
 } from "../../utils/assist";
 
-const prefixCls = "ivu-row";
+const prefixCls = "fairy-row";
 
 export default {
   name: "Row",

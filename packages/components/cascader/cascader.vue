@@ -87,8 +87,8 @@ import { oneOf } from "../../utils/assist";
 import Emitter from "../../mixins/emitter";
 import Locale from "../../mixins/locale";
 
-const prefixCls = "ivu-cascader";
-const selectPrefixCls = "ivu-select";
+const prefixCls = "fairy-cascader";
+const selectPrefixCls = "fairy-select";
 
 export default {
   name: "Cascader",

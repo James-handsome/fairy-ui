@@ -1,11 +1,11 @@
 <template>
   <div @click="onHeaderClick">
     <div
-      class="ivu-tag ivu-tag-checked"
+      class="fairy-tag fairy-tag-checked"
       v-for="(item, index) in selectedMultiple"
       :key="index"
     >
-      <span class="ivu-tag-text">{{ item.label }}</span>
+      <span class="fairy-tag-text">{{ item.label }}</span>
       <Icon type="ios-close-empty" @click.native.stop="removeTag(item)"></Icon>
     </div>
     <span :class="singleDisplayClasses" v-show="singleDisplayValue">{{
@@ -46,7 +46,7 @@ import Icon from "../icon";
 import Emitter from "../../mixins/emitter";
 import Locale from "../../mixins/locale";
 
-const prefixCls = "ivu-select";
+const prefixCls = "fairy-select";
 
 export default {
   name: "iSelectHead",

@@ -32,7 +32,7 @@ LoadingBar.newInstance = (properties) => {
     component: loading_bar,
     destroy() {
       document.body.removeChild(
-        document.getElementsByClassName("ivu-loading-bar")[0]
+        document.getElementsByClassName("fairy-loading-bar")[0]
       );
     },
   };

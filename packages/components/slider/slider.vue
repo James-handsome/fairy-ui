@@ -89,7 +89,7 @@ import { getStyle, oneOf } from "../../utils/assist";
 import { on, off } from "../../utils/dom";
 import Emitter from "../../mixins/emitter";
 
-const prefixCls = "ivu-slider";
+const prefixCls = "fairy-slider";
 
 export default {
   name: "Slider",

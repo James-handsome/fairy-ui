@@ -10,7 +10,7 @@
 </template>
 
 <script>
-const prefixCls = "ivu-scroll";
+const prefixCls = "fairy-scroll";
 
 export default {
   props: ["text", "active", "spinnerHeight"],

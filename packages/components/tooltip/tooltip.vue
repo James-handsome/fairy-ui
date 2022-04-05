@@ -33,7 +33,7 @@ import Popper from "../base/popper";
 import TransferDom from "../../directives/transfer-dom";
 import { oneOf } from "../../utils/assist";
 
-const prefixCls = "ivu-tooltip";
+const prefixCls = "fairy-tooltip";
 
 export default {
   name: "Tooltip",

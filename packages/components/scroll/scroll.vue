@@ -34,7 +34,7 @@ import loader from "./loading-component.vue";
 import { on, off } from "../../utils/dom";
 import Locale from "../../mixins/locale";
 
-const prefixCls = "ivu-scroll";
+const prefixCls = "fairy-scroll";
 const dragConfig = {
   sensitivity: 10,
   minimumStartDragOffset: 5, // minimum start drag offset

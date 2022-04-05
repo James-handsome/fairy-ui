@@ -1,5 +1,5 @@
 <template>
-  <ul class="ivu-dropdown-menu">
+  <ul class="fairy-dropdown-menu">
     <slot></slot>
   </ul>
 </template>

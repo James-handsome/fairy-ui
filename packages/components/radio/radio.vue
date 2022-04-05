@@ -19,7 +19,7 @@
 import { findComponentUpward, oneOf } from "../../utils/assist";
 import Emitter from "../../mixins/emitter";
 
-const prefixCls = "ivu-radio";
+const prefixCls = "fairy-radio";
 
 export default {
   name: "Radio",

@@ -22,7 +22,7 @@
 <script>
 import Notice from "./notice.vue";
 
-const prefixCls = "ivu-notification";
+const prefixCls = "fairy-notification";
 let seed = 0;
 const now = Date.now();
 

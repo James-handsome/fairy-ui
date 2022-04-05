@@ -7,7 +7,7 @@
   </li>
 </template>
 <script>
-const prefixCls = "ivu-select-group";
+const prefixCls = "fairy-select-group";
 
 export default {
   name: "OptionGroup",
@@ -26,7 +26,7 @@ export default {
   methods: {
     queryChange() {
       this.$nextTick(() => {
-        const options = this.$refs.options.querySelectorAll(".ivu-select-item");
+        const options = this.$refs.options.querySelectorAll(".fairy-select-item");
         let hasVisibleOption = false;
         for (let i = 0; i < options.length; i++) {
           if (options[i].style.display !== "none") {

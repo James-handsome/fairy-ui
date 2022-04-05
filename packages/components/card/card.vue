@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-const prefixCls = "ivu-card";
+const prefixCls = "fairy-card";
 const defaultPadding = 16;
 import Icon from "../icon/icon.vue";
 

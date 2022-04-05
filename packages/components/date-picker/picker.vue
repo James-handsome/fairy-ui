@@ -84,8 +84,8 @@ import {
 import { findComponentsDownward } from "../../utils/assist";
 import Emitter from "../../mixins/emitter";
 
-const prefixCls = "ivu-date-picker";
-const pickerPrefixCls = "ivu-picker";
+const prefixCls = "fairy-date-picker";
+const pickerPrefixCls = "fairy-picker";
 
 const isEmptyArray = (val) =>
   val.reduce(
@@ -108,7 +108,7 @@ const mapPossibleValues = (key, horizontal, vertical) => {
 };
 
 const pulseElement = (el) => {
-  const pulseClass = "ivu-date-picker-btn-pulse";
+  const pulseClass = "fairy-date-picker-btn-pulse";
   el.classList.add(pulseClass);
   setTimeout(() => el.classList.remove(pulseClass), 200);
 };
@@ -535,7 +535,7 @@ export default {
 
         // pulse button
         const button = this.$refs.drop.$el.querySelector(
-          `.ivu-date-picker-${position}-btn-arrow${double}`
+          `.fairy-date-picker-${position}-btn-arrow${double}`
         );
         if (button) pulseElement(button);
         return;

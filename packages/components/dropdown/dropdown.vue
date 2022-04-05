@@ -29,7 +29,7 @@ import { directive as clickOutside } from "v-click-outside-x";
 import TransferDom from "../../directives/transfer-dom";
 import { oneOf, findComponentUpward } from "../../utils/assist";
 
-const prefixCls = "ivu-dropdown";
+const prefixCls = "fairy-dropdown";
 
 export default {
   name: "Dropdown",

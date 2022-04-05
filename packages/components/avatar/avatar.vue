@@ -15,7 +15,7 @@
 import Icon from "../icon";
 import { oneOf } from "../../utils/assist";
 
-const prefixCls = "ivu-avatar";
+const prefixCls = "fairy-avatar";
 
 export default {
   name: "Avatar",

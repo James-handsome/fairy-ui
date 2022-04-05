@@ -33,7 +33,7 @@ import ajax from "./ajax";
 import { oneOf } from "../../utils/assist";
 import Emitter from "../../mixins/emitter";
 
-const prefixCls = "ivu-upload";
+const prefixCls = "fairy-upload";
 
 export default {
   name: "Upload",
