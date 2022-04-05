@@ -11,12 +11,12 @@
 #### 2、引用组件库
 ````javascript
     // 全部引入 
-    import 'fairy-ui/dist/css/index.css'
+    import 'fairy-ui/fairyUi.umd.min.js'
     import fairyUi from 'fairy-ui'
     Vue.use(fairyUi)
 
     // 按需引用
-    import 'fairy-ui/dist/css/card.css'
+    import 'fairy-ui/fairyUi.css'
     import { Card } from 'fairy-ui'
     Vue.use(Card)
 ````

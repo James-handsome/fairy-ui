@@ -10,7 +10,7 @@ import { ButtonGroup, Button } from "./components/button";
 import Card from "./components/card";
 import Carousel from "./components/carousel";
 import Cascader from "./components/cascader";
-import Checkbox from "./components/checkbox";
+import { Checkbox , CheckboxGroup } from "./components/checkbox";
 import Circle from "./components/circle";
 import Collapse from "./components/collapse";
 import ColorPicker from "./components/color-picker";
@@ -33,7 +33,7 @@ import Notice from "./components/notice";
 import Page from "./components/page";
 import Poptip from "./components/poptip";
 import Progress from "./components/progress";
-import Radio from "./components/radio";
+import { Radio, RadioGroup } from "./components/radio";
 import Rate from "./components/rate";
 import Sider from "./components/sider";
 import Slider from "./components/slider";
@@ -57,7 +57,11 @@ import './styles/index.less'
 const components = {
   ButtonGroup, Button,
   Icon,
-  Row, Col
+  Row, Col,
+  Input,
+  Radio, RadioGroup,
+  Checkbox,CheckboxGroup
+  
 };
 
 const iview = {

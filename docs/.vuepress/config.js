@@ -36,13 +36,22 @@ module.exports = {
         ],
       },
       {
-        title: "组件",
+        title: "基本",
         collapsable: false,
         children: [
           "/component/Grid",
           "/component/Card",
           "/component/Button",
           "/component/Icon",
+        ],
+      },
+      {
+        title: "Form表单",
+        collapsable: false,
+        children: [
+          "/component/Input",
+          "/component/Radio",
+          "/component/Checkbox",
         ],
       },
      ],
