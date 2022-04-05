@@ -61,7 +61,8 @@ const components = {
   Input,
   Radio, RadioGroup,
   Checkbox,CheckboxGroup,
-  fSwitch:Switch
+  fSwitch:Switch,
+  Table
 };
 
 const iview = {

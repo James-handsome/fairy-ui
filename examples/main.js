@@ -3,8 +3,8 @@ import App from './App.vue'
 import router from './router'
 
 
-import fairyUi from '../lib/fairyUi.umd'
-import '../lib/fairyUi.css' 
+import fairyUi from '../packages/index'
+import '../packages/styles/index.less'
 
 Vue.use(fairyUi);
 
