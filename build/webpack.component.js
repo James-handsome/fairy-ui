@@ -2,11 +2,11 @@ const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 
 module.exports = {
-  entry: "./packages/index.js",
+  entry: './packages/index.js',
   mode: "development",
   output: {
     filename: "[name].umd.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../lib"),
     library: "mui",
     libraryTarget: "umd",
     umdNamedDefine: true,
@@ -93,11 +93,7 @@ module.exports = {
       {
         test: /\.(woff|eot|ttf)\??.*$/,
         loader: "file-loader",
-      },
-      {
-        test: /\.(html|tpl)$/,
-        loader: "html-loader",
-      },
+      }
     ],
   },
 };
