@@ -65,7 +65,10 @@ const components = {
   fCheckbox:Checkbox,
   fCheckboxGroup:CheckboxGroup,
   fSwitch:Switch,
-  fTable:Table
+  fTable:Table,
+  fSelect:Select, 
+  fOption:Option, 
+  fOptionGroup:OptionGroup
 };
 
 const fairyUi = {

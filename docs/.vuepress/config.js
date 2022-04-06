@@ -54,6 +54,7 @@ module.exports = {
           "/component/Checkbox",
           "/component/Switch",
           "/component/Table",
+          "/component/Select",
         ],
       },
      ],
