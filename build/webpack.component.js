@@ -1,22 +1,18 @@
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './packages/index.js',
-  mode: "development",
+  entry: {
+    main:'./packages/index.js'
+  },
+  mode: 'production',
   output: {
-    filename: "[name].umd.js",
     path: path.resolve(__dirname, "../lib"),
+    filename: "fairyui.min.js",
     library: "fairyui",
     libraryTarget: "umd",
     umdNamedDefine: true,
-  },
-  resolve: {
-    extensions: [".js", ".vue"],
-    alias: {
-      vue: "vue/dist/vue.esm.js",
-      "@": path.resolve(__dirname, "src"),
-    },
   },
   externals: {
     vue: {
@@ -26,7 +22,14 @@ module.exports = {
       amd: "vue",
     },
   },
-  plugins: [new VueLoaderPlugin()],
+  plugins: [
+    new VueLoaderPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+    }
+  })
+],
   module: {
     rules: [
       {
