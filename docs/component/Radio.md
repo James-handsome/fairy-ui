@@ -15,7 +15,7 @@
 ::: demo
 ```vue
 <template>
-    <Radio v-model="single">Radio</Radio>
+    <f-radio v-model="single">f-radio</f-radio>
 </template>
 <script>
     export default {
@@ -33,31 +33,31 @@
 -----
 
 
-使用`Radio-group`实现一组互斥的选项组。在组合使用时，`Radio` 使用 `label` 来自动判断。
-每个 `Radio` 的内容可以自定义，如不填写则默认使用 `label` 的值。
+使用`f-radio-group`实现一组互斥的选项组。在组合使用时，`f-radio` 使用 `label` 来自动判断。
+每个 `f-radio` 的内容可以自定义，如不填写则默认使用 `label` 的值。
 
 ::: demo
 ```vue
 <template>
-    <Radio-group v-model="phone">
-        <Radio label="apple">
+    <f-radio-group v-model="phone">
+        <f-radio label="apple">
             <Icon type="social-apple"></Icon>
             <span>apple</span>
-        </Radio>
-        <Radio label="android">
+        </f-radio>
+        <f-radio label="android">
             <Icon type="social-android"></Icon>
             <span>android</span>
-        </Radio>
-        <Radio label="windows">
+        </f-radio>
+        <f-radio label="windows">
             <Icon type="social-windows"></Icon>
             <span>windows</span>
-        </Radio>
-    </Radio-group>
-    <Radio-group v-model="animal">
-        <Radio label="前端开发"></Radio>
-        <Radio label="JAVA"></Radio>
-        <Radio label="PHP"></Radio>
-    </Radio-group>
+        </f-radio>
+    </f-radio-group>
+    <f-radio-group v-model="animal">
+        <f-radio label="前端开发"></f-radio>
+        <f-radio label="JAVA"></f-radio>
+        <f-radio label="PHP"></f-radio>
+    </f-radio-group>
 </template>
 <script>
     export default {
@@ -80,12 +80,12 @@
 ::: demo
 ```vue
 <template>
-    <Radio v-model="disabledSingle" disabled>Radio</Radio>
-    <Radio-group v-model="disabledGroup">
-        <Radio label="白居易" disabled></Radio>
-        <Radio label="李白"></Radio>
-        <Radio label="杜甫"></Radio>
-    </Radio-group>
+    <f-radio v-model="disabledSingle" disabled>f-radio</f-radio>
+    <f-radio-group v-model="disabledGroup">
+        <f-radio label="白居易" disabled></f-radio>
+        <f-radio label="李白"></f-radio>
+        <f-radio label="杜甫"></f-radio>
+    </f-radio-group>
 </template>
 <script>
     export default {
@@ -108,24 +108,24 @@
 ```vue
 <template>
    <div>
-    <Radio-group v-model="button1" type="button">
-        <Radio label="北京"></Radio>
-        <Radio label="上海"></Radio>
-        <Radio label="深圳"></Radio>
-        <Radio label="杭州"></Radio>
-    </Radio-group>
-    <Radio-group v-model="button2" type="button">
-        <Radio label="北京"></Radio>
-        <Radio label="上海" disabled></Radio>
-        <Radio label="深圳"></Radio>
-        <Radio label="杭州"></Radio>
-    </Radio-group>
-    <Radio-group v-model="button3" type="button">
-        <Radio label="北京" disabled></Radio>
-        <Radio label="上海" disabled></Radio>
-        <Radio label="深圳" disabled></Radio>
-        <Radio label="杭州" disabled></Radio>
-    </Radio-group>
+    <f-radio-group v-model="button1" type="button">
+        <f-radio label="北京"></f-radio>
+        <f-radio label="上海"></f-radio>
+        <f-radio label="深圳"></f-radio>
+        <f-radio label="杭州"></f-radio>
+    </f-radio-group>
+    <f-radio-group v-model="button2" type="button">
+        <f-radio label="北京"></f-radio>
+        <f-radio label="上海" disabled></f-radio>
+        <f-radio label="深圳"></f-radio>
+        <f-radio label="杭州"></f-radio>
+    </f-radio-group>
+    <f-radio-group v-model="button3" type="button">
+        <f-radio label="北京" disabled></f-radio>
+        <f-radio label="上海" disabled></f-radio>
+        <f-radio label="深圳" disabled></f-radio>
+        <f-radio label="杭州" disabled></f-radio>
+    </f-radio-group>
    </div>
 </template>
 <script>
@@ -151,24 +151,24 @@
 ::: demo
 ```vue
 <template>
-    <Radio-group v-model="button4" type="button" size="large">
-        <Radio label="北京"></Radio>
-        <Radio label="上海"></Radio>
-        <Radio label="深圳"></Radio>
-        <Radio label="杭州"></Radio>
-    </Radio-group>
-    <Radio-group v-model="button5" type="button">
-        <Radio label="北京"></Radio>
-        <Radio label="上海"></Radio>
-        <Radio label="深圳"></Radio>
-        <Radio label="杭州"></Radio>
-    </Radio-group>
-    <Radio-group v-model="button6" type="button" size="small">
-        <Radio label="北京"></Radio>
-        <Radio label="上海"></Radio>
-        <Radio label="深圳"></Radio>
-        <Radio label="杭州"></Radio>
-    </Radio-group>
+    <f-radio-group v-model="button4" type="button" size="large">
+        <f-radio label="北京"></f-radio>
+        <f-radio label="上海"></f-radio>
+        <f-radio label="深圳"></f-radio>
+        <f-radio label="杭州"></f-radio>
+    </f-radio-group>
+    <f-radio-group v-model="button5" type="button">
+        <f-radio label="北京"></f-radio>
+        <f-radio label="上海"></f-radio>
+        <f-radio label="深圳"></f-radio>
+        <f-radio label="杭州"></f-radio>
+    </f-radio-group>
+    <f-radio-group v-model="button6" type="button" size="small">
+        <f-radio label="北京"></f-radio>
+        <f-radio label="上海"></f-radio>
+        <f-radio label="深圳"></f-radio>
+        <f-radio label="杭州"></f-radio>
+    </f-radio-group>
 </template>
 <script>
     export default {

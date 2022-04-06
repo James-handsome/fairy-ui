@@ -16,7 +16,7 @@
 ::: demo
 ```vue
 <template>
-    <Table :columns="columns1" :data="data1"></Table>
+    <f-table :columns="columns1" :data="data1"></f-table>
 </template>
 <script>
     export default {
@@ -74,7 +74,7 @@
 ::: demo
 ```vue
 <template>
-    <Table stripe :columns="columns1" :data="data1"></Table>
+    <f-table stripe :columns="columns1" :data="data1"></f-table>
 </template>
 <script>
     export default {
@@ -131,7 +131,7 @@
 ::: demo
 ```vue
 <template>
-    <Table border :columns="columns1" :data="data1"></Table>
+    <f-table border :columns="columns1" :data="data1"></f-table>
 </template>
 <script>
     export default {
@@ -189,7 +189,7 @@
 ```vue
 <template>
    <div>
-    <Table height="200" :columns="columns1" :data="data2"></Table>
+    <f-table height="200" :columns="columns1" :data="data2"></f-table>
    </div>
 </template>
 <script>
@@ -270,7 +270,7 @@
 ::: demo
 ```vue
 <template>
-    <Table highlight-row :columns="columns3" :data="data1"></Table>
+    <f-table highlight-row :columns="columns3" :data="data1"></f-table>
 </template>
 <script>
     export default {
@@ -338,7 +338,7 @@
 ::: demo
 ```vue
 <template>
-    <Table border :columns="columns4" :data="data1"></Table>
+    <f-table border :columns="columns4" :data="data1"></f-table>
 </template>
 <script>
     export default {
@@ -406,7 +406,7 @@
 ::: demo
 ```vue
 <template>
-    <Table border :columns="columns5" :data="data5"></Table>
+    <f-table border :columns="columns5" :data="data5"></f-table>
 </template>
 <script>
     export default {
@@ -481,7 +481,7 @@
 |highlight-row  | 是否支持高亮选中的行，即单选  |	Boolean	 | false |
 |row-class-name	|行的 `className`的回调方法，传入参数：`row`：当前行数据,`index`当前行的索引  | Function |	- |  
 |size	        |表格尺寸，可选值为 large、small、default 或者不填|	String |	- |
-|context	    |设置单元格内渲染自定义组件时的上下文。比如父级是 `$parent`，根组件是 `$root`，当 `Table` 作为一个 `slot` 封装在其它组件里时，会很有用  |   Object	| Table所在的上下文 |
+|context	    |设置单元格内渲染自定义组件时的上下文。比如父级是 `$parent`，根组件是 `$root`，当 `f-table` 作为一个 `slot` 封装在其它组件里时，会很有用  |   Object	| f-table所在的上下文 |
 |no-data-text	|         数据为空时显示的提示内容	    |String|	    暂无数据     |
 |no-filtered-data-text	|筛选数据为空时显示的提示内容	| String  | 	暂无筛选结果 |
 
@@ -521,7 +521,7 @@
 |ellipsis	  |开启后，文本将不换行，超出部分显示为省略号	|  Boolean | false |
 |render	      |自定义渲染列，传入三个参数 row、column 和 index，分别指当前单元格数据，当前列数据，当前是第几行，详见示例  |	Function |	- |
 |renderHeader |自定义列头显示内容，传入参数有两个，column 和 index，分别为当前列数据和当前列索引，不支持渲染自定义组件	  | Function |	-  |
-|sortable	  |对应列是否可以排序，如果设置为 custom，则代表用户希望远程排序，需要监听 Table 的 on-sort-change 事件	     | Boolean	 |false|
+|sortable  |对应列是否可以排序，如果设置为 custom，则代表用户希望远程排序，需要监听 f-table 的 on-sort-change 事件	     | Boolean	 |false|
 |sortMethod	  |自定义排序使用的方法，接收三个参数 a 、 b 和 type，当设置 sortable: true 时有效。type 值为 asc 和 desc	 | Function  |	-  |
 |filters	  |过滤数据的选项，格式为数组，数组中每项包含 label 和 value 属性，使用过滤，必须同时配置 filterMethod	     |Array     |	-  |
 |filterMethod |数据过滤使用的方法，如果是多选的筛选项，对每一条数据会执行多次，任意一次返回 true 就会显示	             |Function	 |-    |

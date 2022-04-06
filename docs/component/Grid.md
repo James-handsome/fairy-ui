@@ -4,29 +4,29 @@
 #### 基础用法
 ----
 水平排列的布局,
-`col`必须放在`row`里面，在使用`col`组件时，必须加前缀，如`<Col></Col>`
+`f-col`必须放在`f-row`里面，在使用`f-col`组件时，必须加前缀，如`<f-col></f-col>`
 
 
 ::: demo
 ```vue
 <template>
-    <Row>
-        <Col span="12">col-12</Col>
-        <Col span="12">col-12</Col>
-    </Row>
+    <f-row>
+        <f-col span="12">f-col-12</f-col>
+        <f-col span="12">f-col-12</f-col>
+    </f-row>
     <br>
-    <Row>
-        <Col span="8">col-8</Col>
-        <Col span="8">col-8</Col>
-        <Col span="8">col-8</Col>
-    </Row>
+    <f-row>
+        <f-col span="8">f-col-8</f-col>
+        <f-col span="8">f-col-8</f-col>
+        <f-col span="8">f-col-8</f-col>
+    </f-row>
     <br>
-    <Row>
-        <Col span="6">col-6</Col>
-        <Col span="6">col-6</Col>
-        <Col span="6">col-6</Col>
-        <Col span="6">col-6</Col>
-    </Row>
+    <f-row>
+        <f-col span="6">f-col-6</f-col>
+        <f-col span="6">f-col-6</f-col>
+        <f-col span="6">f-col-6</f-col>
+        <f-col span="6">f-col-6</f-col>
+    </f-row>
 </template>
 <script>
     export default {
@@ -40,26 +40,26 @@
 #### 区块间隔
 ----
 
-通过给 `row` 添加 `gutter` 属性，可以给下属的 `col` 添加间距，推荐使用 (16+8n)px 作为栅格间隔。
+通过给 `f-row` 添加 `gutter` 属性，可以给下属的 `f-col` 添加间距，推荐使用 (16+8n)px 作为栅格间隔。
 
 
 ::: demo
 ```vue
 <template>
-    <Row :gutter="16">
-        <Col span="6">
-            <div>col-6</div>
-        </Col>
-        <Col span="6">
-            <div>col-6</div>
-        </Col>
-        <Col span="6">
-            <div>col-6</div>
-        </Col>
-        <Col span="6">
-            <div>col-6</div>
-        </Col>
-    </Row>
+    <f-row :gutter="16">
+        <f-col span="6">
+            <div>f-col-6</div>
+        </f-col>
+        <f-col span="6">
+            <div>f-col-6</div>
+        </f-col>
+        <f-col span="6">
+            <div>f-col-6</div>
+        </f-col>
+        <f-col span="6">
+            <div>f-col-6</div>
+        </f-col>
+    </f-row>
 </template>
 <script>
     export default {
@@ -79,12 +79,12 @@
 ```vue
 
 <template>
-    <Row type="flex">
-        <Col span="6" order="4">1 | order-4</Col>
-        <Col span="6" order="3">2 | order-3</Col>
-        <Col span="6" order="2">3 | order-2</Col>
-        <Col span="6" order="1">4 | order-1</Col>
-    </Row>
+    <f-row type="flex">
+        <f-col span="6" order="4">1 | order-4</f-col>
+        <f-col span="6" order="3">2 | order-3</f-col>
+        <f-col span="6" order="2">3 | order-2</f-col>
+        <f-col span="6" order="1">4 | order-1</f-col>
+    </f-row>
 </template>
 <script>
     export default {
@@ -103,10 +103,10 @@
 ::: demo
 ```vue
 <template>
-    <Row>
-        <Col span="18" push="6">col-18 | push-6</Col>
-        <Col span="6" pull="18">col-6 | pull-18</Col>
-    </Row>
+    <f-row>
+        <f-col span="18" push="6">f-col-18 | push-6</f-col>
+        <f-col span="6" pull="18">f-col-6 | pull-18</f-col>
+    </f-row>
 </template>
 <script>
     export default {
@@ -123,19 +123,19 @@
 ::: demo
 ```vue
 <template>
-    <Row>
-        <Col span="8">col-8</Col>
-        <Col span="8" offset="8">col-8 | offset-8</Col>
-    </Row>
+    <f-row>
+        <f-col span="8">f-col-8</f-col>
+        <f-col span="8" offset="8">f-col-8 | offset-8</f-col>
+    </f-row>
     <br>
-    <Row>
-        <Col span="6" offset="8">col-6 | offset-8</Col>
-        <Col span="6" offset="4">col-6 | offset-4</Col>
-    </Row>
+    <f-row>
+        <f-col span="6" offset="8">f-col-6 | offset-8</f-col>
+        <f-col span="6" offset="4">f-col-6 | offset-4</f-col>
+    </f-row>
     <br>
-    <Row>
-        <Col span="12" offset="8">col-12 | offset-8</Col>
-    </Row>
+    <f-row>
+        <f-col span="12" offset="8">f-col-12 | offset-8</f-col>
+    </f-row>
 </template>
 <script>
     export default {
@@ -147,7 +147,7 @@
 
 #### Flex布局
 ----
-通过给`row`设置参数`justify`为不同的值，来定义子元素的排布方式。在`flex`模式下有效。
+通过给`f-row`设置参数`justify`为不同的值，来定义子元素的排布方式。在`flex`模式下有效。
 
 
 
@@ -155,40 +155,40 @@
 ```vue
 <template>
     <p>子元素向左排列</p>
-    <Row type="flex" justify="start" class="code-row-bg">
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-    </Row>
+    <f-row type="flex" justify="start" class="code-f-row-bg">
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+    </f-row>
     <p>子元素向右排列</p>
-    <Row type="flex" justify="end" class="code-row-bg">
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-    </Row>
+    <f-row type="flex" justify="end" class="code-f-row-bg">
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+    </f-row>
     <p>子元素居中排列</p>
-    <Row type="flex" justify="center" class="code-row-bg">
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-    </Row>
+    <f-row type="flex" justify="center" class="code-f-row-bg">
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+    </f-row>
     <p>子元素等宽排列</p>
-    <Row type="flex" justify="space-between" class="code-row-bg">
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-    </Row>
+    <f-row type="flex" justify="space-between" class="code-f-row-bg">
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+    </f-row>
     <p>子元素分散排列</p>
-    <Row type="flex" justify="space-around" class="code-row-bg">
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-        <Col span="4">col-4</Col>
-    </Row>
+    <f-row type="flex" justify="space-around" class="code-f-row-bg">
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+        <f-col span="4">f-col-4</f-col>
+    </f-row>
 </template>
 <script>
     export default {
@@ -201,33 +201,33 @@
 
 #### Flex对齐
 ----
-通过给`row`设置参数`align`为不同的值，来定义子元素在垂直方向上的排布方式。在`flex`模式下有效。
+通过给`f-row`设置参数`align`为不同的值，来定义子元素在垂直方向上的排布方式。在`flex`模式下有效。
 
 
 ::: demo
 ```vue
 <template>
     <p>顶部对齐</p>
-    <Row type="flex" justify="center" align="top" class="code-row-bg">
-        <Col span="4"><p style="height: 80px">col-4</p></Col>
-        <Col span="4"><p style="height: 30px">col-4</p></Col>
-        <Col span="4"><p style="height: 100px">col-4</p></Col>
-        <Col span="4"><p style="height: 60px">col-4</p></Col>
-    </Row>
+    <f-row type="flex" justify="center" align="top" class="code-f-row-bg">
+        <f-col span="4"><p style="height: 80px">f-col-4</p></f-col>
+        <f-col span="4"><p style="height: 30px">f-col-4</p></f-col>
+        <f-col span="4"><p style="height: 100px">f-col-4</p></f-col>
+        <f-col span="4"><p style="height: 60px">f-col-4</p></f-col>
+    </f-row>
     <p>底部对齐</p>
-    <Row type="flex" justify="center" align="bottom" class="code-row-bg">
-        <Col span="4"><p style="height: 80px">col-4</p></Col>
-        <Col span="4"><p style="height: 30px">col-4</p></Col>
-        <Col span="4"><p style="height: 100px">col-4</p></Col>
-        <Col span="4"><p style="height: 60px">col-4</p></Col>
-    </Row>
+    <f-row type="flex" justify="center" align="bottom" class="code-f-row-bg">
+        <f-col span="4"><p style="height: 80px">f-col-4</p></f-col>
+        <f-col span="4"><p style="height: 30px">f-col-4</p></f-col>
+        <f-col span="4"><p style="height: 100px">f-col-4</p></f-col>
+        <f-col span="4"><p style="height: 60px">f-col-4</p></f-col>
+    </f-row>
     <p>居中对齐</p>
-    <Row type="flex" justify="center" align="middle" class="code-row-bg">
-        <Col span="4"><p style="height: 80px">col-4</p></Col>
-        <Col span="4"><p style="height: 30px">col-4</p></Col>
-        <Col span="4"><p style="height: 100px">col-4</p></Col>
-        <Col span="4"><p style="height: 60px">col-4</p></Col>
-    </Row>
+    <f-row type="flex" justify="center" align="middle" class="code-f-row-bg">
+        <f-col span="4"><p style="height: 80px">f-col-4</p></f-col>
+        <f-col span="4"><p style="height: 30px">f-col-4</p></f-col>
+        <f-col span="4"><p style="height: 100px">f-col-4</p></f-col>
+        <f-col span="4"><p style="height: 60px">f-col-4</p></f-col>
+    </f-row>
 </template>
 <script>
     export default {
@@ -246,11 +246,11 @@
 ::: demo
 ```vue
 <template>
-    <Row>
-        <Col :xs="2" :sm="4" :md="6" :lg="8">Col</Col>
-        <Col :xs="20" :sm="16" :md="12" :lg="8">Col</Col>
-        <Col :xs="2" :sm="4" :md="6" :lg="8">Col</Col>
-    </Row>
+    <f-row>
+        <f-col :xs="2" :sm="4" :md="6" :lg="8">f-col</f-col>
+        <f-col :xs="20" :sm="16" :md="12" :lg="8">f-col</f-col>
+        <f-col :xs="2" :sm="4" :md="6" :lg="8">f-col</f-col>
+    </f-row>
 </template>
 <script>
     export default {

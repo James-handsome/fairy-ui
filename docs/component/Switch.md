@@ -92,7 +92,7 @@
 ```vue
 <template>
     <f-switch :disabled="disabled"></f-switch>
-    <Button type="primary" @click="disabled = !disabled">禁用</Button>
+    <f-button type="primary" @click="disabled = !disabled">禁用</f-button>
 </template>
 <script>
     export default {

@@ -2,7 +2,7 @@
 
 #### 概述 
 ----
-基本表单组件，支持 `input` 和 `textarea`，并在原生控件基础上进行了功能扩展，可以组合使用。
+基本表单组件，支持 `f-input` 和 `textarea`，并在原生控件基础上进行了功能扩展，可以组合使用。
 
 ### 代码示例
 ----
@@ -14,7 +14,7 @@
 ::: demo
 ```vue
 <template>
-    <Input v-model="value" placeholder="请输入..." style="width: 300px"></Input>
+    <f-input v-model="value" placeholder="请输入..." style="width: 300px"></f-input>
 </template>
 <script>
     export default {
@@ -37,9 +37,9 @@
 ```vue
 <template>
    <div style="display:flex">
-    <Input v-model="value1" size="large" placeholder="large size"></Input>
-    <Input v-model="value2" placeholder="default size"></Input>
-    <Input v-model="value3" size="small" placeholder="small size"></Input>
+    <f-input v-model="value1" size="large" placeholder="large size"></f-input>
+    <f-input v-model="value2" placeholder="default size"></f-input>
+    <f-input v-model="value3" size="small" placeholder="small size"></f-input>
    </div>
 </template>
 <script>
@@ -64,7 +64,7 @@
 ::: demo
 ```vue
 <template>
-    <Input v-model="value4" icon="ios-clock-outline" @on-change="onchange"	  placeholder="请输入..." style="width: 200px"></Input>
+    <f-input v-model="value4" icon="ios-clock-outline" @on-change="onchange"	  placeholder="请输入..." style="width: 200px"></f-input>
 </template>
 <script>
     export default {
@@ -92,8 +92,8 @@
 ```vue
 <template>
    <div style="display:flex">
-    <Input v-model="value7" type="textarea" :autosize="true" placeholder="请输入..."></Input>
-    <Input v-model="value8" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
+    <f-input v-model="value7" type="textarea" :autosize="true" placeholder="请输入..."></f-input>
+    <f-input v-model="value8" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></f-input>
    </div>
 </template>
 <script>
@@ -116,8 +116,8 @@
 ::: demo
 ```vue
 <template>
-    <Input v-model="value9" disabled placeholder="请输入..."></Input>
-    <Input v-model="value10" disabled type="textarea" placeholder="请输入..."></Input>
+    <f-input v-model="value9" disabled placeholder="请输入..."></f-input>
+    <f-input v-model="value10" disabled type="textarea" placeholder="请输入..."></f-input>
 </template>
 <script>
     export default {
@@ -140,30 +140,30 @@
 ```vue
 
 <template>
-    <Input v-model="value11">
+    <f-input v-model="value11">
         <span slot="prepend">http://</span>
         <span slot="append">.com</span>
-    </Input>
+    </f-input>
     <br>
-    <Input v-model="value12">
-        <Select v-model="select1" slot="prepend" style="width: 80px">
-            <Option value="http">http://</Option>
-            <Option value="https">https://</Option>
-        </Select>
-        <Select v-model="select2" slot="append" style="width: 70px">
-            <Option value="com">.com</Option>
-            <Option value="org">.org</Option>
-            <Option value="io">.io</Option>
-        </Select>
-    </Input>
+    <f-input v-model="value12">
+        <f-select v-model="select1" slot="prepend" style="width: 80px">
+            <f-option value="http">http://</f-option>
+            <f-option value="https">https://</f-option>
+        </f-select>
+        <f-select v-model="select2" slot="append" style="width: 70px">
+            <f-option value="com">.com</f-option>
+            <f-option value="org">.org</f-option>
+            <f-option value="io">.io</f-option>
+        </f-select>
+    </f-input>
     <br>
-    <Input v-model="value13">
-        <Select v-model="select3" slot="prepend" style="width: 80px">
-            <Option value="day">日活</Option>
-            <Option value="month">月活</Option>
-        </Select>
-        <Button slot="append" icon="ios-search"></Button>
-    </Input>
+    <f-input v-model="value13">
+        <f-select v-model="select3" slot="prepend" style="width: 80px">
+            <f-option value="day">日活</f-option>
+            <f-option value="month">月活</f-option>
+        </f-select>
+        <f-button slot="append" icon="ios-search"></f-button>
+    </f-input>
 </template>
 <script>
     export default {

@@ -14,7 +14,7 @@
 ::: demo
 ```vue
 <template>
-    <Checkbox v-model="single">Checkbox</Checkbox>
+    <f-checkbox v-model="single">f-checkbox</f-checkbox>
 </template>
 <script>
     export default {
@@ -31,15 +31,15 @@
 
 #### 组合使用
 ----
-使用`Checkbox-group`配合数组来生成组合。在组合使用时，`Checkbox` 使用 `label` 来自动判断选中状态。每个 `Checkbox` 的内容可以自定义，如不填写则默认使用 `label` 的值
+使用`f-checkbox-group`配合数组来生成组合。在组合使用时，`f-checkbox` 使用 `label` 来自动判断选中状态。每个 `f-checkbox` 的内容可以自定义，如不填写则默认使用 `label` 的值
 ::: demo
 ```vue
 <template>
-    <Checkbox-group v-model="fruit">
-        <Checkbox label="香蕉"></Checkbox>
-        <Checkbox label="苹果"></Checkbox>
-        <Checkbox label="西瓜"></Checkbox>
-    </Checkbox-group>
+    <f-checkbox-group v-model="fruit">
+        <f-checkbox label="香蕉"></f-checkbox>
+        <f-checkbox label="苹果"></f-checkbox>
+        <f-checkbox label="西瓜"></f-checkbox>
+    </f-checkbox-group>
 </template>
 <script>
     export default {
@@ -60,12 +60,12 @@
 ::: demo
 ```vue
 <template>
-    <Checkbox v-model="disabledSingle" disabled>Checkbox</Checkbox>
-    <Checkbox-group v-model="disabledGroup">
-        <Checkbox label="香蕉" disabled></Checkbox>
-        <Checkbox label="苹果" disabled></Checkbox>
-        <Checkbox label="西瓜"></Checkbox>
-    </Checkbox-group>
+    <f-checkbox v-model="disabledSingle" disabled>f-checkbox</f-checkbox>
+    <f-checkbox-group v-model="disabledGroup">
+        <f-checkbox label="香蕉" disabled></f-checkbox>
+        <f-checkbox label="苹果" disabled></f-checkbox>
+        <f-checkbox label="西瓜"></f-checkbox>
+    </f-checkbox-group>
 </template>
 <script>
     export default {
@@ -87,22 +87,22 @@
 ::: demo
 ```vue
 <template>
-    <Checkbox v-model="checked" :disabled="disabled">
+    <f-checkbox v-model="checked" :disabled="disabled">
         <span v-if="checked">选中</span>
         <span v-else>取消</span>
          - 
         <span v-if="!disabled">可用</span>
         <span v-else>不可用</span>
-    </Checkbox>
+    </f-checkbox>
     <br>
-    <Button type="primary" @click="checked = !checked">
+    <f-button type="primary" @click="checked = !checked">
         <span v-if="!checked">选中</span>
         <span v-else>取消</span>
-    </Button>
-    <Button type="primary" @click="disabled = !disabled">
+    </f-button>
+    <f-button type="primary" @click="disabled = !disabled">
         <span v-if="disabled">可用</span>
         <span v-else>不可用</span>
-    </Button>
+    </f-button>
 </template>
 <script>
     export default {
@@ -125,16 +125,16 @@
 ```vue
 <template>
     <div style="border-bottom: 1px solid #e9e9e9;padding-bottom:6px;margin-bottom:6px;">
-        <Checkbox
+        <f-checkbox
             :indeterminate="indeterminate"
             :value="checkAll"
-            @click.prevent.native="handleCheckAll">全选</Checkbox>
+            @click.prevent.native="handleCheckAll">全选</f-checkbox>
     </div>
-    <Checkbox-group v-model="checkAllGroup" @on-change="checkAllGroupChange">
-        <Checkbox label="香蕉"></Checkbox>
-        <Checkbox label="苹果"></Checkbox>
-        <Checkbox label="西瓜"></Checkbox>
-    </Checkbox-group>
+    <f-checkbox-group v-model="checkAllGroup" @on-change="checkAllGroupChange">
+        <f-checkbox label="香蕉"></f-checkbox>
+        <f-checkbox label="苹果"></f-checkbox>
+        <f-checkbox label="西瓜"></f-checkbox>
+    </f-checkbox-group>
 </template>
 <script>
     export default {

@@ -54,14 +54,18 @@ import { Select, Option, OptionGroup } from "./components/select";
 import locale from "./locale/index";
 
 const components = {
-  ButtonGroup, Button,
+  fButtonGroup:ButtonGroup, 
+  fButton:Button,
   Icon,
-  Row, Col,
-  Input,
-  Radio, RadioGroup,
-  Checkbox,CheckboxGroup,
+  fRow:Row, 
+  fCol:Col,
+  fInput:Input,
+  fRadio:Radio, 
+  fRadioGroup:RadioGroup,
+  fCheckbox:Checkbox,
+  fCheckboxGroup:CheckboxGroup,
   fSwitch:Switch,
-  Table
+  fTable:Table
 };
 
 const iview = {
