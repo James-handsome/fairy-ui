@@ -20,5 +20,7 @@
     import { Card } from 'fairy-ui'
     Vue.use(Card)
 ````
-
+#### 关闭提交代码gitHooks
+````json
 "pre-commit": "lint-staged"
+````
