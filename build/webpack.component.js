@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: "[name].umd.js",
     path: path.resolve(__dirname, "../lib"),
-    library: "mui",
+    library: "fairyui",
     libraryTarget: "umd",
     umdNamedDefine: true,
   },
