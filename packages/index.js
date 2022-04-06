@@ -68,7 +68,7 @@ const components = {
   fTable:Table
 };
 
-const iview = {
+const fairyUi = {
   ...components,
 };
 
@@ -77,8 +77,8 @@ const install = function (Vue, opts = {}) {
   locale.use(opts.locale);
   locale.i18n(opts.i18n);
 
-  Object.keys(iview).forEach((key) => {
-    Vue.component(key, iview[key]);
+  Object.keys(fairyUi).forEach((key) => {
+    Vue.component(key, fairyUi[key]);
   });
 
   Vue.prototype.$Loading = LoadingBar;
