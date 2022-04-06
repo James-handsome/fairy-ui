@@ -9,18 +9,10 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, "../lib"),
-    filename: "fairyui.min.js",
-    library: "fairyui",
+    filename: "[name].min.js",
+    library: "mui",
     libraryTarget: "umd",
     umdNamedDefine: true,
-  },
-  externals: {
-    vue: {
-      root: "Vue",
-      commonjs: "vue",
-      commonjs2: "vue",
-      amd: "vue",
-    },
   },
   plugins: [
     new VueLoaderPlugin(),
@@ -29,35 +21,16 @@ module.exports = {
         NODE_ENV: '"production"'
     }
   })
-],
+  ],
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: "vue-loader",
-        options: {
-          loaders: {
-            less: [
-              "vue-style-loader",
-              {
-                loader: "css-loader",
-                options: {
-                  sourceMap: true,
-                },
-              },
-              {
-                loader: "less-loader",
-                options: {
-                  sourceMap: true,
-                },
-              },
-            ],
-          },
-          postLoaders: {
-            html: "babel-loader?sourceMap",
-          },
-          sourceMap: true,
-        },
+        use:[
+          {
+            loader: "vue-loader",
+          }
+        ]
       },
       {
         test: /\.js$/,
