@@ -456,3 +456,48 @@
 </script>
 ```
 :::
+
+### API
+
+#### Select props
+
+|属性 |	说明  |	类型  |	默认值 |
+|-----| ------| ----- | ------ |
+|value   	   |指定选中项目的 value 值，可以使用 `v-model` 双向绑定数据。单选时只接受 String 或 Number，多选时只接受 Array	|String \| Number \| Array	|空|
+|multiple	    |是否支持多选  |	Boolean	|false|
+|disabled	    |是否禁用|	Boolean	|false|
+|clearable	    |是否可以清空选项，只在单选时有效|	Boolean	| false|
+|filterable	    |是否支持搜索|	Boolean	|false|
+|size	        |选择框大小，可选值为`large`和`small`或者不填|	String |	- |
+|placeholder	|选择框默认文字|	String	|请选择|
+|not-found-text	|当下拉列表为空时显示的内容|	String |	无匹配数据|
+|label-in-value	|在返回选项时，是否将 `label` 和 value 一并返回，默认只返回 value|	Boolean	 | false|
+
+
+#### Select events
+
+|事件名	|说明	|返回值|
+|------ | ----- | ---- |
+|on-change	|选中的Option变化时触发，默认返回 value，如需返回 label，详见 label-in-value 属性	|当前选中项|
+
+
+#### Select methods
+|方法名	|说明 |	参数|
+|-----  | ----| ----|
+|setQuery	|设置搜索词，为空时清空，仅在 `filterable="true"` 时有效 |	query |
+|clearSingleSelect|	清空单选项，仅在 `clearable="true"` 时有效  |	无|
+
+#### Option props
+
+|属性	|  说明  |	类型  |	默认值 |
+|----   | -----  | -----  | -----  |
+|value	|选项值，默认根据此属性值进行筛选，必填	|String \| Number|	无 |
+|label	|选项显示的内容，默认会读取 `slot`，无 `slot` 时，优先读取该 `label` 值，无 `label` 时，读取 value。当选中时，选择器会显示 `label` 为已选文案。大部分情况不需要配置此项，直接写入 `slot` 即可，在自定义选项时，该属性非常有用。|	String|	-|
+|disabled|	是否禁用当前项|	Boolean	|false|
+
+
+
+#### OptionGroup props
+|属性	| 说明	| 类型	| 默认值 |
+| ------| ----- | ----- | -----  |   
+|label	|分组的组名|	String|	空  |
