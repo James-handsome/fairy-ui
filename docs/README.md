@@ -15,7 +15,7 @@ footer: fairy-ui
 ---
 
 ### 设计原则
-<br>
+<br> 
 <div style="display:flex;justify-content: space-between;padding-bottom:40px">
   <div style="display: flex;flex-direction: column;align-items: center;">
     <img style="width:100px" src="https://artice-code-1258339218.cos.ap-beijing.myqcloud.com/vuepress/consistency.png" alt="一致性">
