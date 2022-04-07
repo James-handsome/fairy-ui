@@ -18,7 +18,9 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    minimizer: [new TerserPlugin()],
+    minimizer: [new TerserPlugin({
+      parallel: true,
+    })],
   },
   plugins: [
     new SimpleProgressWebpackPlugin(),
