@@ -1,6 +1,8 @@
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 const webpack = require('webpack');
+const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -14,7 +16,12 @@ module.exports = {
     libraryTarget: "umd",
     umdNamedDefine: true,
   },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   plugins: [
+    new SimpleProgressWebpackPlugin(),
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
@@ -60,16 +67,17 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]?[hash]",
-        },
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(woff|eot|ttf)\??.*$/,
-        loader: "file-loader",
+        test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
+        loader: 'url-loader',
+        query: {
+          limit: 10000,
+          name: '[name].[hash:5].[ext]'
+        }
       }
-    ],
+    ]
   },
 };
