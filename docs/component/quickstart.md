@@ -3,14 +3,13 @@
 
 
 
-
 一般在 vue 入口页面 `main.js` 中如下配置：
 #### 全部引入
 
 ````javaScript
         import Vue from 'vue';
         import router from './router';
-    +   import fairyUi from 'fairyUi';         // 引入组件库
+    +   import fairyUi from 'fairy-ui';        // 引入组件库
     +   import 'fairy-ui/lib/styles/index.css' // 引入css 
 
 
@@ -29,7 +28,7 @@
 注意:按需引入依然需要引入 css 文件
 
 ````javaScript
-    import Button from 'fairyUi/src/components/checkbox';
+    import Button from 'fairy-ui/packages/components/checkbox';
 ````
 
 
