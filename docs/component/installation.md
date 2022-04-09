@@ -10,3 +10,11 @@
 ```javaScript
   npm i fairy-ui
 ```
+
+```javaScript
+  yarn i fairy-ui
+```
+
+```javaScript
+  pnpm i fairy-ui
+```
