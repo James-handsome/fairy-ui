@@ -55,6 +55,8 @@ module.exports = {
           "/component/Switch",
           "/component/Table",
           "/component/Select",
+          "/component/Slider",
+          "/component/DatePicker",
         ],
       },
      ],

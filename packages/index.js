@@ -68,7 +68,9 @@ const components = {
   fTable:Table,
   fSelect:Select, 
   fOption:Option, 
-  fOptionGroup:OptionGroup
+  fOptionGroup:OptionGroup,
+  fSlider:Slider,
+  fDatePicker:DatePicker,
 };
 
 const fairyUi = {
