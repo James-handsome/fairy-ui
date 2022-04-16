@@ -44,5 +44,5 @@
 注意:按需引入依然需要引入 css 文件
 
 ````javaScript
-    import Button from 'fairy-ui/packages/components/checkbox';
+    import checkbox from 'fairy-ui/packages/components/checkbox';
 ````
