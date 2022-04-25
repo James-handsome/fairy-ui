@@ -71,7 +71,8 @@ const components = {
   fOptionGroup:OptionGroup,
   fSlider:Slider,
   fDatePicker:DatePicker,
-  fTimePicker:TimePicker
+  fTimePicker:TimePicker,
+  fCascader:Cascader,
 };
 
 const fairyUi = {

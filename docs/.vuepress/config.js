@@ -57,6 +57,7 @@ module.exports = {
           "/component/Select",
           "/component/Slider",
           "/component/DatePicker",
+          "/component/Cascader",
         ],
       },
      ],
