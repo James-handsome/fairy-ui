@@ -73,7 +73,12 @@ const components = {
   fDatePicker:DatePicker,
   fTimePicker:TimePicker,
   fCascader:Cascader,
-  fTransfer:Transfer
+  fTransfer:Transfer,
+  fInputNumber:InputNumber,
+  fRate:Rate,
+  fUpload:Upload,
+  fModal:Modal,
+  fProgress:Progress
 };
 
 const fairyUi = {
