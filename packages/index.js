@@ -101,7 +101,7 @@ const install = function (Vue, opts = {}) {
   Vue.prototype.$Spin = Spin;
 };
 
-// auto install
+// auto install=
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
