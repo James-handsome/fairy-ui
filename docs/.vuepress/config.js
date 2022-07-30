@@ -53,7 +53,6 @@ module.exports = {
           "/component/Radio",
           "/component/Checkbox",
           "/component/Switch",
-          "/component/Table",
           "/component/Select",
           "/component/Slider",
           "/component/DatePicker",
