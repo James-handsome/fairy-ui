@@ -184,6 +184,121 @@ Form 组件基于  `async-validator` 实现的数据验证，给 `Form` 设置�
 ::: demo
 ```vue
 
+<template>
+    <f-form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
+        <f-form-item label="姓名" prop="name">
+            <f-input v-model="formValidate.name" placeholder="请输入姓名"></f-input>
+        </f-form-item>
+        <f-form-item label="邮箱" prop="mail">
+            <f-input v-model="formValidate.mail" placeholder="请输入邮箱"></f-input>
+        </f-form-item>
+        <f-form-item label="城市" prop="city">
+            <f-select v-model="formValidate.city" placeholder="请选择所在地">
+                <f-option value="beijing">北京市</f-option>
+                <f-option value="shanghai">上海市</f-option>
+                <f-option value="shenzhen">深圳市</f-option>
+            </f-select>
+        </f-form-item>
+        <f-form-item label="选择日期">
+            <f-row>
+                <f-col span="11">
+                    <f-form-item prop="date">
+                        <f-date-picker type="date" placeholder="选择日期" v-model="formValidate.date"></f-date-picker>
+                    </f-form-item>
+                </f-col>
+                <f-col span="2" style="text-align: center">-</f-col>
+                <f-col span="11">
+                    <f-form-item prop="time">
+                        <f-time-picker type="time" placeholder="选择时间" v-model="formValidate.time"></f-time-picker>
+                    </f-form-item>
+                </f-col>
+            </f-row>
+        </f-form-item>
+        <f-form-item label="性别" prop="gender">
+            <f-radio-group v-model="formValidate.gender">
+                <f-radio label="male">男</f-radio>
+                <f-radio label="female">女</f-radio>
+            </f-radio-group>
+        </f-form-item>
+        <f-form-item label="爱好" prop="interest">
+            <f-checkbox-group v-model="formValidate.interest">
+                <f-checkbox label="吃饭"></f-checkbox>
+                <f-checkbox label="睡觉"></f-checkbox>
+                <f-checkbox label="跑步"></f-checkbox>
+                <f-checkbox label="看电影"></f-checkbox>
+            </f-checkbox-group>
+        </f-form-item>
+        <f-form-item label="介绍" prop="desc">
+            <f-input v-model="formValidate.desc" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></f-input>
+        </f-form-item>
+        <f-form-item>
+            <f-button type="primary" @click="handleSubmit('formValidate')">提交</f-button>
+            <f-button type="ghost" @click="handleReset('formValidate')" style="margin-left: 8px">重置</f-button>
+        </f-form-item>
+    </f-form>
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                formValidate: {
+                    name: '',
+                    mail: '',
+                    city: '',
+                    gender: '',
+                    interest: [],
+                    date: '',
+                    time: '',
+                    desc: ''
+                },
+                ruleValidate: {
+                    name: [
+                        { required: true, message: '姓名不能为空', trigger: 'blur' }
+                    ],
+                    mail: [
+                        { required: true, message: '邮箱不能为空', trigger: 'blur' },
+                        { type: 'email', message: '邮箱格式不正确', trigger: 'blur' }
+                    ],
+                    city: [
+                        { required: true, message: '请选择城市', trigger: 'change' }
+                    ],
+                    gender: [
+                        { required: true, message: '请选择性别', trigger: 'change' }
+                    ],
+                    interest: [
+                        { required: true, type: 'array', min: 1, message: '至少选择一个爱好', trigger: 'change' },
+                        { type: 'array', max: 2, message: '最多选择两个爱好', trigger: 'change' }
+                    ],
+                    date: [
+                        { required: true, type: 'date', message: '请选择日期', trigger: 'change' }
+                    ],
+                    time: [
+                        { required: true, type: 'date', message: '请选择时间', trigger: 'change' }
+                    ],
+                    desc: [
+                        { required: true, message: '请输入个人介绍', trigger: 'blur' },
+                        { type: 'string', min: 20, message: '介绍不能少于20字', trigger: 'blur' }
+                    ]
+                }
+            }
+        },
+        methods: {
+            handleSubmit (name) {
+                this.$refs[name].validate((valid) => {
+                    if (valid) {
+                        this.$Message.success('提交成功!');
+                    } else {
+                        this.$Message.error('表单验证失败!');
+                    }
+                })
+            },
+            handleReset (name) {
+                this.$refs[name].resetFields();
+            }
+        }
+    }
+</script>
+
 
 
 ```
