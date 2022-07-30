@@ -18,7 +18,7 @@ import Content from "./components/content";
 import DatePicker from "./components/date-picker";
 import Dropdown from "./components/dropdown";
 import Footer from "./components/footer";
-import Form from "./components/form";
+import Form ,{ FormItem } from "./components/form";
 import Header from "./components/header";
 import Icon from "./components/icon";
 import Input from "./components/input";
@@ -53,6 +53,7 @@ import { Row, Col } from "./components/grid";
 import { Select, Option, OptionGroup } from "./components/select";
 import locale from "./locale/index";
 
+
 const components = {
   fButtonGroup:ButtonGroup, 
   fButton:Button,
@@ -78,7 +79,9 @@ const components = {
   fRate:Rate,
   fUpload:Upload,
   fModal:Modal,
-  fProgress:Progress
+  fProgress:Progress,
+  fForm:Form,
+  fFormItem:FormItem,
 };
 
 const fairyUi = {

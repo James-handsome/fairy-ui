@@ -62,6 +62,7 @@ module.exports = {
           "/component/InputNumber",
           "/component/Rate",
           "/component/Upload",
+          "/component/Form",
         ],
       },
      ],
