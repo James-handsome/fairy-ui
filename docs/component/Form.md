@@ -273,7 +273,7 @@ Form 组件基于  `async-validator` 实现的数据验证，给 `Form` 设置�
                         { required: true, type: 'date', message: '请选择日期', trigger: 'change' }
                     ],
                     time: [
-                        { required: true, type: 'date', message: '请选择时间', trigger: 'change' }
+                        { required: true, type: 'string', message: '请选择时间', trigger: 'change' }
                     ],
                     desc: [
                         { required: true, message: '请输入个人介绍', trigger: 'blur' },
@@ -303,3 +303,245 @@ Form 组件基于  `async-validator` 实现的数据验证，给 `Form` 设置�
 
 ```
 :::
+
+
+
+
+#### 自定义验证 
+---
+
+可以完全自定义验证规则来完成更复杂的验证，比如某些数据需要在服务端验证时。示例展示的是密码的二次确认及模拟的一个异步验证。
+
+
+::: demo
+```vue
+<template>
+    <f-form ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="80">
+        <f-form-item label="密码" prop="passwd">
+            <f-input type="password" v-model="formCustom.passwd"></f-input>
+        </f-form-item>
+        <f-form-item label="确认密码" prop="passwdCheck">
+            <f-input type="password" v-model="formCustom.passwdCheck"></f-input>
+        </f-form-item>
+        <f-form-item label="年龄" prop="age">
+            <f-input type="text" v-model="formCustom.age" number></f-input>
+        </f-form-item>
+        <f-form-item>
+            <f-button type="primary" @click="handleSubmit('formCustom')">提交</f-button>
+            <f-button type="ghost" @click="handleReset('formCustom')" style="margin-left: 8px">重置</f-button>
+        </f-form-item>
+    </f-form>
+</template>
+<script>
+    export default {
+        data () {
+            const validatePass = (rule, value, callback) => {
+                if (value === '') {
+                    callback(new Error('请输入密码'));
+                } else {
+                    if (this.formCustom.passwdCheck !== '') {
+                        // 对第二个密码框单独验证
+                        this.$refs.formCustom.validateField('passwdCheck');
+                    }
+                    callback();
+                }
+            };
+            const validatePassCheck = (rule, value, callback) => {
+                if (value === '') {
+                    callback(new Error('请再次输入密码'));
+                } else if (value !== this.formCustom.passwd) {
+                    callback(new Error('两次输入密码不一致!'));
+                } else {
+                    callback();
+                }
+            };
+            const validateAge = (rule, value, callback) => {
+                if (!value) {
+                    return callback(new Error('年龄不能为空'));
+                }
+                // 模拟异步验证效果
+                setTimeout(() => {
+                    if (!Number.isInteger(value)) {
+                        callback(new Error('请输入数字值'));
+                    } else {
+                        if (value < 18) {
+                            callback(new Error('必须年满18岁'));
+                        } else {
+                            callback();
+                        }
+                    }
+                }, 1000);
+            };
+            
+            return {
+                formCustom: {
+                    passwd: '',
+                    passwdCheck: '',
+                    age: ''
+                },
+                ruleCustom: {
+                    passwd: [
+                        { validator: validatePass, trigger: 'blur' }
+                    ],
+                    passwdCheck: [
+                        { validator: validatePassCheck, trigger: 'blur' }
+                    ],
+                    age: [
+                        { validator: validateAge, trigger: 'blur' }
+                    ]
+                }
+            }
+        },
+        methods: {
+            handleSubmit (name) {
+                this.$refs[name].validate((valid) => {
+                    if (valid) {
+                        this.$Message.success('提交成功!');
+                    } else {
+                        this.$Message.error('表单验证失败!');
+                    }
+                })
+            },
+            handleReset (name) {
+                this.$refs[name].resetFields();
+            }
+        }
+    }
+</script>
+```
+:::
+
+
+#### 动态增减表单项 
+当需要动态维护 `Form-item` 时，也可以直接给 `Form-item` 设置属性 `rules` 来单独为该域做验证。
+
+动态设置 `Form-item` 的 `prop` 属性时，会依据上层的 `Form` 组件的 `model` 来获取，查看示例代码。
+
+`Form-item` 还可以独立设置 `required`、`error` 等属性，详见 API。
+
+
+
+::: demo
+```vue
+
+<template>
+    <f-form ref="formDynamic" :model="formDynamic" :label-width="80">
+        <f-form-item
+            v-for="(item, index) in formDynamic.items"
+            :key="index"
+            :label="'项目' + (index + 1)"
+            :prop="'items.' + index + '.value'"
+            :rules="{required: true, message: '项目' + (index + 1) +'不能为空', trigger: 'blur'}">
+            <f-row>
+                <f-col span="18">
+                    <f-input type="text" v-model="item.value" placeholder="请输入..."></f-input>
+                </f-col>
+                <f-col span="4" offset="1">
+                    <f-button type="ghost" @click="handleRemove(index)">删除</f-button>
+                </f-col>
+            </f-row>
+        </f-form-item>
+        <f-form-item>
+            <f-row>
+                <f-col span="12">
+                    <f-button type="dashed" long @click="handleAdd" icon="plus-round">新增</f-button>
+                </f-col>
+            </f-row>
+        </f-form-item>
+        <f-form-item>
+            <f-button type="primary" @click="handleSubmit('formDynamic')">提交</f-button>
+            <f-button type="ghost" @click="handleReset('formDynamic')" style="margin-left: 8px">重置</f-button>
+        </f-form-item>
+    </f-form>
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                formDynamic: {
+                    items: [
+                        {
+                            value: ''
+                        }
+                    ]
+                }
+            }
+        },
+        methods: {
+            handleSubmit (name) {
+                this.$refs[name].validate((valid) => {
+                    if (valid) {
+                        this.$Message.success('提交成功!');
+                    } else {
+                        this.$Message.error('表单验证失败!');
+                    }
+                })
+            },
+            handleReset (name) {
+                this.$refs[name].resetFields();
+            },
+            handleAdd () {
+                this.formDynamic.items.push({
+                    value: ''
+                });
+            },
+            handleRemove (index) {
+                this.formDynamic.items.splice(index, 1);
+            }
+        }
+    }
+</script>
+
+```
+:::
+
+
+### API
+
+#### Form props 
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| model | 表单数据对象 | Object | \- |
+| rules | 表单验证规则，具体配置查看 [async-validator](https://github.com/yiminghe/async-validator) | Object | \- |
+| inline | 是否开启行内表单模式 | Boolean | false |
+| label-position | 表单域标签的位置，可选值为 `left`、`right`、`top` | String | right |
+| label-width | 表单域标签的宽度，所有的 Form-item 都会继承 Form 组件的 label-width 的值 | Number | \- |
+| show-message | 是否显示校验错误信息 | Boolean | true |
+
+
+#### Form methods 
+
+
+| 方法名 | 说明 | 参数 |
+| --- | --- | --- |
+| validate | 对整个表单进行校验，参数为检验完的回调，会返回一个 Boolean 表示成功与失败 | callback |
+| validateField | 对部分表单字段进行校验的方法，参数1为需校验的 prop，参数2为检验完回调，同上 | callback |
+| resetFields | 对整个表单进行重置，将所有字段值重置为空并移除校验结果 | 无 |
+
+
+#### FormItem props 
+
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| prop | 对于表单域 model 里的字段 | String | \- |
+| label | 标签文本 | String | \- |
+| label-width | 表单域标签的的宽度 | Number | \- |
+| required | 是否必填，如不设置，则会根据校验规则自动生成 | Boolean | \- |
+| rules | 表单验证规则 | Number | \- |
+| error | 表单域验证错误信息, 设置该值会使表单验证状态变为error，并显示该错误信息 | String | \- |
+| show-message | 是否显示校验错误信息 | Boolean | true |
+
+
+#### FormItem slot 
+
+
+| 名称 | 说明 |
+| --- | --- |
+| 无 | 内容 |
+| label | label 内容 |
+
+
+
+
