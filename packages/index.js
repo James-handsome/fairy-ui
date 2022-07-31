@@ -82,6 +82,8 @@ const components = {
   fProgress:Progress,
   fForm:Form,
   fFormItem:FormItem,
+  Alert,
+  Card
 };
 
 const fairyUi = {

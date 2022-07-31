@@ -40,7 +40,6 @@ module.exports = {
         collapsable: false,
         children: [
           "/component/Grid",
-          "/component/Card",
           "/component/Button",
           "/component/Icon",
         ],
@@ -65,6 +64,14 @@ module.exports = {
           "/component/Form",
         ],
       },
+      {
+        title: "View",
+        collapsable: false,
+        children: [
+          "/component/Alert",
+          "/component/Card",
+        ],
+      }
      ],
     },
     head:[
